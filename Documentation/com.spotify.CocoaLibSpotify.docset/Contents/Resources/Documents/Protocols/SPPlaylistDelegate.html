@@ -1,0 +1,725 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SPPlaylistDelegate Protocol Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.3 (build 684)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPPlaylistDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/playlist:didAddTracks:atIndexes:">&nbsp;&nbsp;&nbsp;&nbsp;- playlist:didAddTracks:atIndexes:</option>
+	
+	<option value="//api/name/playlist:didMoveTracks:atIndexes:toIndexes:">&nbsp;&nbsp;&nbsp;&nbsp;- playlist:didMoveTracks:atIndexes:toIndexes:</option>
+	
+	<option value="//api/name/playlist:didRemoveTracks:atIndexes:">&nbsp;&nbsp;&nbsp;&nbsp;- playlist:didRemoveTracks:atIndexes:</option>
+	
+	<option value="//api/name/playlist:willAddTracks:atIndexes:">&nbsp;&nbsp;&nbsp;&nbsp;- playlist:willAddTracks:atIndexes:</option>
+	
+	<option value="//api/name/playlist:willMoveTracks:atIndexes:toIndexes:">&nbsp;&nbsp;&nbsp;&nbsp;- playlist:willMoveTracks:atIndexes:toIndexes:</option>
+	
+	<option value="//api/name/playlist:willRemoveTracks:atIndexes:">&nbsp;&nbsp;&nbsp;&nbsp;- playlist:willRemoveTracks:atIndexes:</option>
+	
+	<option value="//api/name/tracksInPlaylistDidUpdateMetadata:">&nbsp;&nbsp;&nbsp;&nbsp;- tracksInPlaylistDidUpdateMetadata:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Track Removal">Track Removal</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Track Addition">Track Addition</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Track Reordering">Track Reordering</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist:didAddTracks:atIndexes:">playlist:didAddTracks:atIndexes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist:didMoveTracks:atIndexes:toIndexes:">playlist:didMoveTracks:atIndexes:toIndexes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist:didRemoveTracks:atIndexes:">playlist:didRemoveTracks:atIndexes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist:willAddTracks:atIndexes:">playlist:willAddTracks:atIndexes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist:willMoveTracks:atIndexes:toIndexes:">playlist:willMoveTracks:atIndexes:toIndexes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist:willRemoveTracks:atIndexes:">playlist:willRemoveTracks:atIndexes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tracksInPlaylistDidUpdateMetadata:">tracksInPlaylistDidUpdateMetadata:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPPlaylistDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPPlaylistDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPPlaylist.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Delegate callbacks from <a href="../Classes/SPPlaylist.html">SPPlaylist</a> to help with track reordering.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tracksInPlaylistDidUpdateMetadata:">&ndash;&nbsp;tracksInPlaylistDidUpdateMetadata:</a></code>
+		<span class="tooltip"><p>Called when one or more tracks in the playlist updated their metadata.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Track Removal" name="task_Track Removal"></a>
+						<h3 class="subsubtitle task-title">Track Removal</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist:willRemoveTracks:atIndexes:">&ndash;&nbsp;playlist:willRemoveTracks:atIndexes:</a></code>
+		<span class="tooltip"><p>Called before one or more tracks in the playlist will be removed from the playlist.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist:didRemoveTracks:atIndexes:">&ndash;&nbsp;playlist:didRemoveTracks:atIndexes:</a></code>
+		<span class="tooltip"><p>Called after one or more tracks in the playlist were removed from the playlist.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Track Addition" name="task_Track Addition"></a>
+						<h3 class="subsubtitle task-title">Track Addition</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist:willAddTracks:atIndexes:">&ndash;&nbsp;playlist:willAddTracks:atIndexes:</a></code>
+		<span class="tooltip"><p>Called before one or more tracks are added to the playlist.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist:didAddTracks:atIndexes:">&ndash;&nbsp;playlist:didAddTracks:atIndexes:</a></code>
+		<span class="tooltip"><p>Called after one or more tracks are added to the playlist.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Track Reordering" name="task_Track Reordering"></a>
+						<h3 class="subsubtitle task-title">Track Reordering</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist:willMoveTracks:atIndexes:toIndexes:">&ndash;&nbsp;playlist:willMoveTracks:atIndexes:toIndexes:</a></code>
+		<span class="tooltip"><p>Called before one or more tracks are moved within the playlist.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist:didMoveTracks:atIndexes:toIndexes:">&ndash;&nbsp;playlist:didMoveTracks:atIndexes:toIndexes:</a></code>
+		<span class="tooltip"><p>Called after one or more tracks are moved within the playlist.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist:didAddTracks:atIndexes:" title="playlist:didAddTracks:atIndexes:"></a>
+	<h3 class="subsubtitle method-title">playlist:didAddTracks:atIndexes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after one or more tracks are added to the playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)playlist:(SPPlaylist *)<em>aPlaylist</em> didAddTracks:(NSArray *)<em>tracks</em> atIndexes:(NSIndexSet *)<em>newIndexes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist in which tracks were added.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>The tracks that were added.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>newIndexes</em></dt>
+			<dd><p>The destination indexes of the tracks.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist:didMoveTracks:atIndexes:toIndexes:" title="playlist:didMoveTracks:atIndexes:toIndexes:"></a>
+	<h3 class="subsubtitle method-title">playlist:didMoveTracks:atIndexes:toIndexes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after one or more tracks are moved within the playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)playlist:(SPPlaylist *)<em>aPlaylist</em> didMoveTracks:(NSArray *)<em>tracks</em> atIndexes:(NSIndexSet *)<em>oldIndexes</em> toIndexes:(NSIndexSet *)<em>newIndexes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist in which tracks will be moved.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>The tracks that will be moved.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>oldIndexes</em></dt>
+			<dd><p>The (invalid) old indexes of the tracks.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>newIndexes</em></dt>
+			<dd><p>The now current indexes of the tracks.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist:didRemoveTracks:atIndexes:" title="playlist:didRemoveTracks:atIndexes:"></a>
+	<h3 class="subsubtitle method-title">playlist:didRemoveTracks:atIndexes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after one or more tracks in the playlist were removed from the playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)playlist:(SPPlaylist *)<em>aPlaylist</em> didRemoveTracks:(NSArray *)<em>tracks</em> atIndexes:(NSIndexSet *)<em>theseIndexesArentValidAnymore</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist in which tracks were removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>The tracks that were be removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>theseIndexesArentValidAnymore</em></dt>
+			<dd><p>The (now invalid) indexes of the tracks.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Important:</strong> The index set passed to this method is not valid for the given tracks.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist:willAddTracks:atIndexes:" title="playlist:willAddTracks:atIndexes:"></a>
+	<h3 class="subsubtitle method-title">playlist:willAddTracks:atIndexes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before one or more tracks are added to the playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)playlist:(SPPlaylist *)<em>aPlaylist</em> willAddTracks:(NSArray *)<em>tracks</em> atIndexes:(NSIndexSet *)<em>theseIndexesArentYetValid</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist to which tracks will be added.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>The tracks that will be added.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>theseIndexesArentYetValid</em></dt>
+			<dd><p>The (invalid, for now) destination indexes of the tracks.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Important:</strong> The index set passed to this method is not valid for the given tracks.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist:willMoveTracks:atIndexes:toIndexes:" title="playlist:willMoveTracks:atIndexes:toIndexes:"></a>
+	<h3 class="subsubtitle method-title">playlist:willMoveTracks:atIndexes:toIndexes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before one or more tracks are moved within the playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)playlist:(SPPlaylist *)<em>aPlaylist</em> willMoveTracks:(NSArray *)<em>tracks</em> atIndexes:(NSIndexSet *)<em>oldIndexes</em> toIndexes:(NSIndexSet *)<em>newIndexes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist in which tracks will be moved.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>The tracks that will be moved.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>oldIndexes</em></dt>
+			<dd><p>The current indexes of the tracks.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>newIndexes</em></dt>
+			<dd><p>The (invalid, for now) indexes that the tracks will end up at.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist:willRemoveTracks:atIndexes:" title="playlist:willRemoveTracks:atIndexes:"></a>
+	<h3 class="subsubtitle method-title">playlist:willRemoveTracks:atIndexes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called before one or more tracks in the playlist will be removed from the playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)playlist:(SPPlaylist *)<em>aPlaylist</em> willRemoveTracks:(NSArray *)<em>tracks</em> atIndexes:(NSIndexSet *)<em>outgoingIndexes</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist in which tracks will be removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>The tracks that will be removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>outgoingIndexes</em></dt>
+			<dd><p>The indexes of the tracks.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tracksInPlaylistDidUpdateMetadata:" title="tracksInPlaylistDidUpdateMetadata:"></a>
+	<h3 class="subsubtitle method-title">tracksInPlaylistDidUpdateMetadata:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when one or more tracks in the playlist updated their metadata.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)tracksInPlaylistDidUpdateMetadata:(SPPlaylist *)<em>aPlaylist</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylist</em></dt>
+			<dd><p>The playlist in which tracks updated their metadata.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Spotify AB. All rights reserved. (Last updated: 2011-05-26)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.3 (build 684)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>
