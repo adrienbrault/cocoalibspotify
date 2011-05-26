@@ -5,6 +5,8 @@ Please note: These sample projects require Mac OS X 10.6 and higher and Xcode 4
 
 Please also note: The sample projects need a valid application key to build, placed in "appkey.c" in the same directory as the rest of the code files. Premium users can obtain an application key at http://developer.spotify.com/.
 
+Please ALSO note: If you checked this out from our GitHub repo, you must run git submodule update --init before the sample projects will build.
+
 SimplePlayer
 ============
 
