@@ -396,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"/libspotify-0.0.8-Darwin";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -415,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"/libspotify-0.0.8-Darwin";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -434,10 +436,7 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"/**",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -463,10 +462,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"/**",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
