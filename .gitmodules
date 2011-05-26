@@ -1,0 +1,6 @@
+[submodule "Sample Projects/Guess The Intro/Guess The Intro/CoCA"]
+	path = Sample Projects/Guess The Intro/Guess The Intro/CoCA
+	url = git://github.com/iKenndac/CoCA.git
+[submodule "Sample Projects/SimplePlayer/SimplePlayer/CoCA"]
+	path = Sample Projects/SimplePlayer/SimplePlayer/CoCA
+	url = git://github.com/iKenndac/CoCA.git

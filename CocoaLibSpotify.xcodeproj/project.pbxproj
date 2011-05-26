@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5004B3C7133E39460098C7B4 /* SPURLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5004B3C5133E39460098C7B4 /* SPURLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5004B3C8133E39460098C7B4 /* SPURLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004B3C6133E39460098C7B4 /* SPURLExtensions.m */; };
+		503D631013258041007772CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5028EC8B13092B7C00BF0B22 /* Cocoa.framework */; };
+		503D631B13258062007772CA /* SPErrorExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5028ECBE130947B800BF0B22 /* SPErrorExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D631C13258068007772CA /* SPErrorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028ECBF130947B800BF0B22 /* SPErrorExtensions.m */; };
+		503D631D1325806E007772CA /* SPUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AB044C1312D00400357CD2 /* SPUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D631E1325806E007772CA /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AB044D1312D00900357CD2 /* SPUser.m */; };
+		503D631F1325806E007772CA /* SPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5028ECB6130937B200BF0B22 /* SPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D63201325806E007772CA /* SPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028ECB7130937B200BF0B22 /* SPSession.m */; };
+		503D63211325806E007772CA /* SPPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5028ECB913093B5800BF0B22 /* SPPlaylist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D63221325806E007772CA /* SPPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5028ECBA13093B5800BF0B22 /* SPPlaylist.m */; };
+		503D63231325806E007772CA /* SPPlaylistFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 503D56AF131086DB00894014 /* SPPlaylistFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D63251325806E007772CA /* SPTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D1B50E130FC21A00F4EB93 /* SPTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D63261325806E007772CA /* SPTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1B50F130FC21A00F4EB93 /* SPTrack.m */; };
+		503D63271325806E007772CA /* SPPlaylistContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 503D56AB13107D4500894014 /* SPPlaylistContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D63281325806E007772CA /* SPPlaylistContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D56AC13107D4500894014 /* SPPlaylistContainer.m */; };
+		503D63291325807D007772CA /* SPAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 50CE7626131161BD0047543F /* SPAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D632A1325807D007772CA /* SPArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 50CE762A13117F880047543F /* SPArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D632B1325807D007772CA /* SPImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 50CE7623131149AD0047543F /* SPImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503D632C13258084007772CA /* SPAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE7627131161BE0047543F /* SPAlbum.m */; };
+		503D632D13258084007772CA /* SPArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE762B13117F890047543F /* SPArtist.m */; };
+		503D632E13258084007772CA /* SPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE7624131149AD0047543F /* SPImage.m */; };
+		504379031370564D001DD605 /* SPPlaylistContainerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 504379011370564C001DD605 /* SPPlaylistContainerInternal.h */; };
+		50437908137057D9001DD605 /* SPPlaylistFolderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 50437906137057D7001DD605 /* SPPlaylistFolderInternal.h */; };
+		506359451369833500B90B67 /* SPToplist.h in Headers */ = {isa = PBXBuildFile; fileRef = 506359431369833500B90B67 /* SPToplist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		506359461369833500B90B67 /* SPToplist.m in Sources */ = {isa = PBXBuildFile; fileRef = 506359441369833500B90B67 /* SPToplist.m */; };
+		5099D84C136436D3005C7CDC /* SPPostTracksToInboxOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5099D84A136436D3005C7CDC /* SPPostTracksToInboxOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5099D84D136436D3005C7CDC /* SPPostTracksToInboxOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099D84B136436D3005C7CDC /* SPPostTracksToInboxOperation.m */; };
+		5099D87913644E71005C7CDC /* SPArtistBrowse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5099D87713644E71005C7CDC /* SPArtistBrowse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5099D87A13644E71005C7CDC /* SPArtistBrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099D87813644E71005C7CDC /* SPArtistBrowse.m */; };
+		5099D88413647D4F005C7CDC /* SPAlbumBrowse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5099D88213647D4F005C7CDC /* SPAlbumBrowse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5099D88513647D4F005C7CDC /* SPAlbumBrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099D88313647D4F005C7CDC /* SPAlbumBrowse.m */; };
+		50B7850E136EC15400D51152 /* SPPlaylistFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D56B0131086DB00894014 /* SPPlaylistFolder.m */; };
+		50D9158F1382EBB3008FF7C1 /* libspotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D9158E1382EBB3008FF7C1 /* libspotify.framework */; };
+		50D915901382EBCD008FF7C1 /* libspotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50D9158E1382EBB3008FF7C1 /* libspotify.framework */; };
+		50D9864713605B8000DA5542 /* SPSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D9864513605B8000DA5542 /* SPSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50D9864813605B8000DA5542 /* SPSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D9864613605B8000DA5542 /* SPSearch.m */; };
+		50E65EB11325862700E66AFA /* CocoaLibSpotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 50E65EB01325862700E66AFA /* CocoaLibSpotify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		503D63311325811E007772CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50D915901382EBCD008FF7C1 /* libspotify.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5004B3C5133E39460098C7B4 /* SPURLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPURLExtensions.h; sourceTree = "<group>"; };
+		5004B3C6133E39460098C7B4 /* SPURLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPURLExtensions.m; sourceTree = "<group>"; };
+		5028EC8B13092B7C00BF0B22 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5028EC8E13092B7C00BF0B22 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5028EC8F13092B7C00BF0B22 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5028EC9013092B7C00BF0B22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5028EC9313092B7C00BF0B22 /* CocoaLibSpotify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaLibSpotify-Info.plist"; sourceTree = "<group>"; };
+		5028EC9513092B7C00BF0B22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5028EC9713092B7C00BF0B22 /* CocoaLibSpotify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaLibSpotify-Prefix.pch"; sourceTree = "<group>"; };
+		5028ECB6130937B200BF0B22 /* SPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPSession.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5028ECB7130937B200BF0B22 /* SPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSession.m; sourceTree = "<group>"; };
+		5028ECB913093B5800BF0B22 /* SPPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPPlaylist.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5028ECBA13093B5800BF0B22 /* SPPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPlaylist.m; sourceTree = "<group>"; };
+		5028ECBE130947B800BF0B22 /* SPErrorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPErrorExtensions.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5028ECBF130947B800BF0B22 /* SPErrorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPErrorExtensions.m; sourceTree = "<group>"; };
+		503D56AB13107D4500894014 /* SPPlaylistContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPPlaylistContainer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		503D56AC13107D4500894014 /* SPPlaylistContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPlaylistContainer.m; sourceTree = "<group>"; };
+		503D56AF131086DB00894014 /* SPPlaylistFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistFolder.h; sourceTree = "<group>"; };
+		503D56B0131086DB00894014 /* SPPlaylistFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPlaylistFolder.m; sourceTree = "<group>"; };
+		503D630F13258041007772CA /* CocoaLibSpotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLibSpotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		504379011370564C001DD605 /* SPPlaylistContainerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistContainerInternal.h; sourceTree = "<group>"; };
+		50437906137057D7001DD605 /* SPPlaylistFolderInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistFolderInternal.h; sourceTree = "<group>"; };
+		506359431369833500B90B67 /* SPToplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPToplist.h; sourceTree = "<group>"; };
+		506359441369833500B90B67 /* SPToplist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPToplist.m; sourceTree = "<group>"; };
+		5099D84A136436D3005C7CDC /* SPPostTracksToInboxOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPostTracksToInboxOperation.h; sourceTree = "<group>"; };
+		5099D84B136436D3005C7CDC /* SPPostTracksToInboxOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPostTracksToInboxOperation.m; sourceTree = "<group>"; };
+		5099D87713644E71005C7CDC /* SPArtistBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPArtistBrowse.h; sourceTree = "<group>"; };
+		5099D87813644E71005C7CDC /* SPArtistBrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPArtistBrowse.m; sourceTree = "<group>"; };
+		5099D88213647D4F005C7CDC /* SPAlbumBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlbumBrowse.h; sourceTree = "<group>"; };
+		5099D88313647D4F005C7CDC /* SPAlbumBrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlbumBrowse.m; sourceTree = "<group>"; };
+		50AB044C1312D00400357CD2 /* SPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPUser.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		50AB044D1312D00900357CD2 /* SPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUser.m; sourceTree = "<group>"; };
+		50CE7623131149AD0047543F /* SPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPImage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		50CE7624131149AD0047543F /* SPImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPImage.m; sourceTree = "<group>"; };
+		50CE7626131161BD0047543F /* SPAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPAlbum.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		50CE7627131161BE0047543F /* SPAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlbum.m; sourceTree = "<group>"; };
+		50CE762A13117F880047543F /* SPArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPArtist.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		50CE762B13117F890047543F /* SPArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPArtist.m; sourceTree = "<group>"; };
+		50D1B50E130FC21A00F4EB93 /* SPTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SPTrack.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		50D1B50F130FC21A00F4EB93 /* SPTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTrack.m; sourceTree = "<group>"; };
+		50D9158E1382EBB3008FF7C1 /* libspotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libspotify.framework; path = "libspotify-0.0.8-Darwin/libspotify.framework"; sourceTree = "<group>"; };
+		50D9864513605B8000DA5542 /* SPSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSearch.h; sourceTree = "<group>"; };
+		50D9864613605B8000DA5542 /* SPSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSearch.m; sourceTree = "<group>"; };
+		50E65EB01325862700E66AFA /* CocoaLibSpotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLibSpotify.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		503D630B13258041007772CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503D631013258041007772CA /* Cocoa.framework in Frameworks */,
+				50D9158F1382EBB3008FF7C1 /* libspotify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5028EC7C13092B7B00BF0B22 = {
+			isa = PBXGroup;
+			children = (
+				5028EC9113092B7C00BF0B22 /* CocoaLibSpotify */,
+				5028EC8A13092B7B00BF0B22 /* Frameworks */,
+				5028EC8813092B7B00BF0B22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5028EC8813092B7B00BF0B22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				503D630F13258041007772CA /* CocoaLibSpotify.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5028EC8A13092B7B00BF0B22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50D9158E1382EBB3008FF7C1 /* libspotify.framework */,
+				5028EC8B13092B7C00BF0B22 /* Cocoa.framework */,
+				5028EC8D13092B7C00BF0B22 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5028EC8D13092B7C00BF0B22 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5028EC8E13092B7C00BF0B22 /* AppKit.framework */,
+				5028EC8F13092B7C00BF0B22 /* CoreData.framework */,
+				5028EC9013092B7C00BF0B22 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5028EC9113092B7C00BF0B22 /* CocoaLibSpotify */ = {
+			isa = PBXGroup;
+			children = (
+				50E65EB01325862700E66AFA /* CocoaLibSpotify.h */,
+				5028ECBC1309479600BF0B22 /* Extensions */,
+				5028ECB5130931D000BF0B22 /* Model */,
+				5028EC9213092B7C00BF0B22 /* Supporting Files */,
+			);
+			path = CocoaLibSpotify;
+			sourceTree = "<group>";
+		};
+		5028EC9213092B7C00BF0B22 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5028EC9313092B7C00BF0B22 /* CocoaLibSpotify-Info.plist */,
+				5028EC9413092B7C00BF0B22 /* InfoPlist.strings */,
+				5028EC9713092B7C00BF0B22 /* CocoaLibSpotify-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5028ECB5130931D000BF0B22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50CE762D13117F940047543F /* Metadata */,
+				50AB044C1312D00400357CD2 /* SPUser.h */,
+				50AB044D1312D00900357CD2 /* SPUser.m */,
+				5028ECB6130937B200BF0B22 /* SPSession.h */,
+				5028ECB7130937B200BF0B22 /* SPSession.m */,
+				5028ECB913093B5800BF0B22 /* SPPlaylist.h */,
+				5028ECBA13093B5800BF0B22 /* SPPlaylist.m */,
+				503D56AF131086DB00894014 /* SPPlaylistFolder.h */,
+				50437906137057D7001DD605 /* SPPlaylistFolderInternal.h */,
+				503D56B0131086DB00894014 /* SPPlaylistFolder.m */,
+				50D1B50E130FC21A00F4EB93 /* SPTrack.h */,
+				50D1B50F130FC21A00F4EB93 /* SPTrack.m */,
+				503D56AB13107D4500894014 /* SPPlaylistContainer.h */,
+				504379011370564C001DD605 /* SPPlaylistContainerInternal.h */,
+				503D56AC13107D4500894014 /* SPPlaylistContainer.m */,
+				50D9864513605B8000DA5542 /* SPSearch.h */,
+				50D9864613605B8000DA5542 /* SPSearch.m */,
+				5099D84A136436D3005C7CDC /* SPPostTracksToInboxOperation.h */,
+				5099D84B136436D3005C7CDC /* SPPostTracksToInboxOperation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5028ECBC1309479600BF0B22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5028ECBE130947B800BF0B22 /* SPErrorExtensions.h */,
+				5028ECBF130947B800BF0B22 /* SPErrorExtensions.m */,
+				5004B3C5133E39460098C7B4 /* SPURLExtensions.h */,
+				5004B3C6133E39460098C7B4 /* SPURLExtensions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		50CE762D13117F940047543F /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				50CE7626131161BD0047543F /* SPAlbum.h */,
+				50CE7627131161BE0047543F /* SPAlbum.m */,
+				50CE762A13117F880047543F /* SPArtist.h */,
+				50CE762B13117F890047543F /* SPArtist.m */,
+				50CE7623131149AD0047543F /* SPImage.h */,
+				50CE7624131149AD0047543F /* SPImage.m */,
+				5099D87713644E71005C7CDC /* SPArtistBrowse.h */,
+				5099D87813644E71005C7CDC /* SPArtistBrowse.m */,
+				5099D88213647D4F005C7CDC /* SPAlbumBrowse.h */,
+				5099D88313647D4F005C7CDC /* SPAlbumBrowse.m */,
+				506359431369833500B90B67 /* SPToplist.h */,
+				506359441369833500B90B67 /* SPToplist.m */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		503D630C13258041007772CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503D631B13258062007772CA /* SPErrorExtensions.h in Headers */,
+				503D631D1325806E007772CA /* SPUser.h in Headers */,
+				503D631F1325806E007772CA /* SPSession.h in Headers */,
+				503D63211325806E007772CA /* SPPlaylist.h in Headers */,
+				503D63231325806E007772CA /* SPPlaylistFolder.h in Headers */,
+				503D63251325806E007772CA /* SPTrack.h in Headers */,
+				503D63271325806E007772CA /* SPPlaylistContainer.h in Headers */,
+				503D63291325807D007772CA /* SPAlbum.h in Headers */,
+				503D632A1325807D007772CA /* SPArtist.h in Headers */,
+				503D632B1325807D007772CA /* SPImage.h in Headers */,
+				50E65EB11325862700E66AFA /* CocoaLibSpotify.h in Headers */,
+				5004B3C7133E39460098C7B4 /* SPURLExtensions.h in Headers */,
+				50D9864713605B8000DA5542 /* SPSearch.h in Headers */,
+				5099D84C136436D3005C7CDC /* SPPostTracksToInboxOperation.h in Headers */,
+				5099D87913644E71005C7CDC /* SPArtistBrowse.h in Headers */,
+				5099D88413647D4F005C7CDC /* SPAlbumBrowse.h in Headers */,
+				506359451369833500B90B67 /* SPToplist.h in Headers */,
+				504379031370564D001DD605 /* SPPlaylistContainerInternal.h in Headers */,
+				50437908137057D9001DD605 /* SPPlaylistFolderInternal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		503D630E13258041007772CA /* CocoaLibSpotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 503D631813258041007772CA /* Build configuration list for PBXNativeTarget "CocoaLibSpotify" */;
+			buildPhases = (
+				50D9158C1382E8D5008FF7C1 /* Run Script (Download libspotify if needed) */,
+				503D630A13258041007772CA /* Sources */,
+				503D630C13258041007772CA /* Headers */,
+				503D630D13258041007772CA /* Resources */,
+				503D630B13258041007772CA /* Frameworks */,
+				503D63311325811E007772CA /* CopyFiles */,
+				50E65EC31325915100E66AFA /* Run Script (Set up symbolic links) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaLibSpotify;
+			productName = CocoaLibSpotify;
+			productReference = 503D630F13258041007772CA /* CocoaLibSpotify.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5028EC7E13092B7B00BF0B22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+				ORGANIZATIONNAME = Spotify;
+			};
+			buildConfigurationList = 5028EC8113092B7B00BF0B22 /* Build configuration list for PBXProject "CocoaLibSpotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5028EC7C13092B7B00BF0B22;
+			productRefGroup = 5028EC8813092B7B00BF0B22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				503D630E13258041007772CA /* CocoaLibSpotify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		503D630D13258041007772CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50D9158C1382E8D5008FF7C1 /* Run Script (Download libspotify if needed) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Download libspotify if needed)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/python;
+			shellScript = "import urllib\nimport zipfile\nimport os\nimport sys\nimport commands\n\nlibspotifyFileName = \"libspotify-0.0.8-Darwin.zip\"\nlibspotifyRemoteLocation = \"http://developer.spotify.com/download/libspotify/\"\nprojectDir = os.environ.get('PROJECT_DIR')\nlibspotifyDirectoryDir = os.path.join(projectDir, \"libspotify-0.0.8-Darwin\")\nlibspotifyZipDir = os.path.join(projectDir, libspotifyFileName)\n\nif (os.path.exists(libspotifyDirectoryDir)):\n    print \"LibSpotify is present, no download needed.\"\n    sys.exit(0)\n\nprint \"LibSpotify not present, downloading...\"\n\ntry:\n    urllib.urlretrieve(libspotifyRemoteLocation + libspotifyFileName, libspotifyZipDir)\nexcept OSError:\n    print \"Could not download \" + libspotifyRemoteLocation + libspotifyFileName + \".\"\n    sys.exit(1)\n\nunzipCommand = 'unzip -q  ' + libspotifyZipDir + ' -d \"' + projectDir + '\"'\nunzipResult = commands.getstatusoutput(unzipCommand)\n\nif (unzipResult[0] != 0):\n    print \"Could not unzip \" + libspotifyFileName + \".\"\n    sys.exit(1)\n\ntry:\n    os.remove(libspotifyZipDir)\nexcept OSError:\n    print \"Could not remove downloaded zip file.\"\n\nprint \"Complete.\"";
+		};
+		50E65EC31325915100E66AFA /* Run Script (Set up symbolic links) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (Set up symbolic links)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FRAMEWORK_DIR=\"$BUILT_PRODUCTS_DIR/CocoaLibSpotify.framework/Versions\"\nFRAMEWORKS_LINK_LOCATION=\"$FRAMEWORK_DIR/Frameworks\"\n\nif ( ! [ -e \"$FRAMEWORKS_LINK_LOCATION\" ]); then\ncd \"$FRAMEWORK_DIR\"\nln -s \"Current/Frameworks\" \"Frameworks\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503D630A13258041007772CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503D631C13258068007772CA /* SPErrorExtensions.m in Sources */,
+				503D631E1325806E007772CA /* SPUser.m in Sources */,
+				503D63201325806E007772CA /* SPSession.m in Sources */,
+				503D63221325806E007772CA /* SPPlaylist.m in Sources */,
+				503D63261325806E007772CA /* SPTrack.m in Sources */,
+				503D63281325806E007772CA /* SPPlaylistContainer.m in Sources */,
+				503D632C13258084007772CA /* SPAlbum.m in Sources */,
+				503D632D13258084007772CA /* SPArtist.m in Sources */,
+				503D632E13258084007772CA /* SPImage.m in Sources */,
+				5004B3C8133E39460098C7B4 /* SPURLExtensions.m in Sources */,
+				50D9864813605B8000DA5542 /* SPSearch.m in Sources */,
+				5099D84D136436D3005C7CDC /* SPPostTracksToInboxOperation.m in Sources */,
+				5099D87A13644E71005C7CDC /* SPArtistBrowse.m in Sources */,
+				5099D88513647D4F005C7CDC /* SPAlbumBrowse.m in Sources */,
+				506359461369833500B90B67 /* SPToplist.m in Sources */,
+				50B7850E136EC15400D51152 /* SPPlaylistFolder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5028EC9413092B7C00BF0B22 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5028EC9513092B7C00BF0B22 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5028ECA313092B7C00BF0B22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5028ECA413092B7C00BF0B22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		503D631913258041007772CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"/**",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaLibSpotify/CocoaLibSpotify-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "CocoaLibSpotify/CocoaLibSpotify-Info.plist";
+				INSTALL_PATH = "@rpath";
+				OTHER_LDFLAGS = (
+					"-sub_umbrella",
+					libspotify,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		503D631A13258041007772CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"/**",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaLibSpotify/CocoaLibSpotify-Prefix.pch";
+				INFOPLIST_FILE = "CocoaLibSpotify/CocoaLibSpotify-Info.plist";
+				INSTALL_PATH = "@rpath";
+				OTHER_LDFLAGS = (
+					"-sub_umbrella",
+					libspotify,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5028EC8113092B7B00BF0B22 /* Build configuration list for PBXProject "CocoaLibSpotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5028ECA313092B7C00BF0B22 /* Debug */,
+				5028ECA413092B7C00BF0B22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		503D631813258041007772CA /* Build configuration list for PBXNativeTarget "CocoaLibSpotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503D631913258041007772CA /* Debug */,
+				503D631A13258041007772CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5028EC7E13092B7B00BF0B22 /* Project object */;
+}
