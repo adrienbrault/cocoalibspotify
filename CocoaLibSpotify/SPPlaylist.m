@@ -446,9 +446,6 @@ static NSString * const kSPPlaylistKVOContext = @"kSPPlaylistKVOContext";
 
 -(void)rebuildSubscribers {
 	
-	// TODO: Re-enable when subscribers are fixed in libspotify.
-	return;
-	
 	NSUInteger subscriberCount = sp_playlist_num_subscribers(self.playlist);
 	
 	if (subscriberCount > 0) {
