@@ -557,8 +557,8 @@ static NSString * const kSPPlaylistKVOContext = @"kSPPlaylistKVOContext";
 		if (self.trackChangesAreFromLibSpotifyCallback) {
 			[trackWrapper insertObject:aTrack atIndex:anIndex];
 		} else {
-			const sp_track *track = [aTrack track];
-			const sp_track **trackPointer = &track;
+			sp_track *const track = [aTrack track];
+			sp_track *const *trackPointer = &track;
 			sp_playlist_add_tracks(playlist, trackPointer, 1, (int)anIndex, [session session]);
 		}
 	}

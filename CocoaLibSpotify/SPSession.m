@@ -399,12 +399,32 @@ static NSString * const kSPSessionKVOContext = @"kSPSessionKVOContext";
 static SPSession *sharedSession;
 
 +(SPSession *)sharedSession {
-	if (sharedSession == nil)
-		sharedSession = [[SPSession alloc] init];
 	return sharedSession;
 }
 
++(void)initializeSharedSessionWithApplicationKey:(NSData *)appKey
+									   userAgent:(NSString *)userAgent
+										   error:(NSError **)error {
+	
+	[sharedSession release];
+	sharedSession = [[SPSession alloc] initWithApplicationKey:appKey
+													userAgent:userAgent
+														error:error];	
+}
+
++(NSString *)libSpotifyBuildId {
+	return [NSString stringWithUTF8String:sp_build_id()];
+}
+
 -(id)init {
+	// This will always fail.
+	return [self initWithApplicationKey:nil userAgent:nil error:nil];
+}
+
+-(id)initWithApplicationKey:(NSData *)appKey
+				  userAgent:(NSString *)userAgent
+					  error:(NSError **)error {
+	
 	if ((self = [super init])) {
         
         trackCache = [[NSMutableDictionary alloc] init];
@@ -420,67 +440,59 @@ static SPSession *sharedSession;
 			   forKeyPath:@"starredPlaylist.tracks"
 				  options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew
 				  context:kSPSessionKVOContext];
-	}
-	return self;
-}
-
--(BOOL)attemptLoginWithApplicationKey:(NSData *)appKey 
-							userAgent:(NSString *)userAgent 
-							 userName:(NSString *)userName 
-							 password:(NSString *)password
-								error:(NSError **)error {
-    
-	if (appKey == nil || [userAgent length] == 0 || [userName length] == 0 || [password length] == 0)
-		return NO;
-	
-	[self logout];
-	
-	// Find the application support directory for settings
-	
-	NSString *applicationSupportDirectory = nil;
-	NSArray *potentialDirectories = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory,
-																		NSUserDomainMask,
-																		YES);
-	
-	if ([potentialDirectories count] > 0) {
-		applicationSupportDirectory = [[potentialDirectories objectAtIndex:0] stringByAppendingPathComponent:userAgent];
-	} else {
-		applicationSupportDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:userAgent];
-	}
-	
-	if (![[NSFileManager defaultManager] fileExistsAtPath:applicationSupportDirectory]) {
-		if (![[NSFileManager defaultManager] createDirectoryAtPath:applicationSupportDirectory
-									   withIntermediateDirectories:YES
-														attributes:nil
-															 error:error]) {
-			return NO;
+		
+		if (appKey == nil || [userAgent length] == 0) {
+			[self release];
+			return nil;
 		}
-	}
-	
-	// Find the caches directory for cache
-	
-	NSString *cacheDirectory = nil;
-	
-	NSArray *potentialCacheDirectories = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
-																			 NSUserDomainMask,
-																			 YES);
-	
-	if ([potentialCacheDirectories count] > 0) {
-		cacheDirectory = [[potentialCacheDirectories objectAtIndex:0] stringByAppendingPathComponent:userAgent];
-	} else {
-		cacheDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:userAgent];
-	}
-	
-	if (![[NSFileManager defaultManager] fileExistsAtPath:cacheDirectory]) {
-		if (![[NSFileManager defaultManager] createDirectoryAtPath:cacheDirectory
-									   withIntermediateDirectories:YES
-														attributes:nil
-															 error:error]) {
-			return NO;
+		
+		// Find the application support directory for settings
+		
+		NSString *applicationSupportDirectory = nil;
+		NSArray *potentialDirectories = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory,
+																			NSUserDomainMask,
+																			YES);
+		
+		if ([potentialDirectories count] > 0) {
+			applicationSupportDirectory = [[potentialDirectories objectAtIndex:0] stringByAppendingPathComponent:userAgent];
+		} else {
+			applicationSupportDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:userAgent];
 		}
-	}
-        
-	if (session == NULL) {
+		
+		if (![[NSFileManager defaultManager] fileExistsAtPath:applicationSupportDirectory]) {
+			if (![[NSFileManager defaultManager] createDirectoryAtPath:applicationSupportDirectory
+										   withIntermediateDirectories:YES
+															attributes:nil
+																 error:error]) {
+				[self release];
+				return nil;
+			}
+		}
+		
+		// Find the caches directory for cache
+		
+		NSString *cacheDirectory = nil;
+		
+		NSArray *potentialCacheDirectories = NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
+																				 NSUserDomainMask,
+																				 YES);
+		
+		if ([potentialCacheDirectories count] > 0) {
+			cacheDirectory = [[potentialCacheDirectories objectAtIndex:0] stringByAppendingPathComponent:userAgent];
+		} else {
+			cacheDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:userAgent];
+		}
+		
+		if (![[NSFileManager defaultManager] fileExistsAtPath:cacheDirectory]) {
+			if (![[NSFileManager defaultManager] createDirectoryAtPath:cacheDirectory
+										   withIntermediateDirectories:YES
+															attributes:nil
+																 error:error]) {
+				[self release];
+				return nil;
+			}
+		}
+		
 		sp_session_config config;
 		
 		config.api_version = SPOTIFY_API_VERSION;
@@ -498,13 +510,56 @@ static SPSession *sharedSession;
 			session = NULL;
 			if (error != NULL) {
 				*error = [NSError spotifyErrorWithCode:createError];
-				return NO;
 			}
+			[self release];
+			return nil;
 		}
 	}
 	
-	sp_session_login(session, [userName UTF8String], [password UTF8String]);
+	return self;
+}
+
+-(void)attemptLoginWithUserName:(NSString *)userName 
+					   password:(NSString *)password
+			rememberCredentials:(BOOL)rememberMe {
+    
+	if ([userName length] == 0 || [password length] == 0)
+		return;
+	
+	[self logout];
+	sp_session_login(session, [userName UTF8String], [password UTF8String], rememberMe);
+}
+
+-(BOOL)attemptLoginWithStoredCredentials:(NSError **)error {
+	
+	sp_error errorCode = sp_session_relogin(session);
+	
+	if (errorCode != SP_ERROR_OK) {
+		if (error != NULL) {
+			*error = [NSError spotifyErrorWithCode:errorCode];
+		}
+		return NO;
+	}
 	return YES;
+}
+
+-(NSString *)storedCredentialsUserName {
+	
+	char userNameBuffer[300];
+	int userNameLength = sp_session_remembered_user(session, (char *)&userNameBuffer, sizeof(userNameBuffer));
+	
+	if (userNameLength == -1)
+		return nil;
+	
+	NSString *userName = [NSString stringWithUTF8String:(char *)&userNameBuffer];
+	if ([userName length] > 0)
+		return userName;
+	else
+		return nil;
+}
+
+-(void)forgetStoredCredentials {
+	sp_session_forget_me(session);
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -838,6 +893,10 @@ static SPSession *sharedSession;
 	[mutableStats setValue:[NSNumber numberWithBool:status.syncing] forKey:SPOfflineStatisticsIsSyncingKey];
 	
 	return [NSDictionary dictionaryWithDictionary:mutableStats];
+}
+
+-(NSTimeInterval)offlineKeyTimeRemaining {
+	return (NSTimeInterval)sp_offline_time_left(session);
 }
 
 -(BOOL)isOfflineSyncing {
