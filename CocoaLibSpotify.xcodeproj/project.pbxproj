@@ -44,6 +44,7 @@
 		50B7850E136EC15400D51152 /* SPPlaylistFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D56B0131086DB00894014 /* SPPlaylistFolder.m */; };
 		50D9864713605B8000DA5542 /* SPSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D9864513605B8000DA5542 /* SPSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50D9864813605B8000DA5542 /* SPSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D9864613605B8000DA5542 /* SPSearch.m */; };
+		50E011821406D0FA0045E72A /* CocoaLibSpotifyPlatformImports.h in Headers */ = {isa = PBXBuildFile; fileRef = 50E011811406D0FA0045E72A /* CocoaLibSpotifyPlatformImports.h */; };
 		50E65EB11325862700E66AFA /* CocoaLibSpotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 50E65EB01325862700E66AFA /* CocoaLibSpotify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		50D1B50F130FC21A00F4EB93 /* SPTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTrack.m; sourceTree = "<group>"; };
 		50D9864513605B8000DA5542 /* SPSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSearch.h; sourceTree = "<group>"; };
 		50D9864613605B8000DA5542 /* SPSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSearch.m; sourceTree = "<group>"; };
+		50E011811406D0FA0045E72A /* CocoaLibSpotifyPlatformImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLibSpotifyPlatformImports.h; sourceTree = "<group>"; };
 		50E65EB01325862700E66AFA /* CocoaLibSpotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLibSpotify.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				50E65EB01325862700E66AFA /* CocoaLibSpotify.h */,
+				50E011811406D0FA0045E72A /* CocoaLibSpotifyPlatformImports.h */,
 				5028ECBC1309479600BF0B22 /* Extensions */,
 				5028ECB5130931D000BF0B22 /* Model */,
 				5028EC9213092B7C00BF0B22 /* Supporting Files */,
@@ -260,6 +263,7 @@
 				506359451369833500B90B67 /* SPToplist.h in Headers */,
 				504379031370564D001DD605 /* SPPlaylistContainerInternal.h in Headers */,
 				50437908137057D9001DD605 /* SPPlaylistFolderInternal.h in Headers */,
+				50E011821406D0FA0045E72A /* CocoaLibSpotifyPlatformImports.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

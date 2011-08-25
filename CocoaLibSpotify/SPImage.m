@@ -36,10 +36,10 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 @interface SPImage ()
 
-@property (readwrite, retain) NSImage *image;
+@property (readwrite, retain) SPPlatformNativeImage *image;
 @property (readwrite) sp_image *spImage;
 @property (readwrite, getter=isLoaded) BOOL loaded;
-@property (readwrite) __weak SPSession *session;
+@property (readwrite, assign) __weak SPSession *session;
 
 @end
 
@@ -131,7 +131,7 @@ static NSMutableDictionary *imageCache;
                 
                 if (size > 0) {
                     NSData *imageData = [NSData dataWithBytes:data length:size];
-                    [self setImage:[[[NSImage alloc] initWithData:imageData] autorelease]];
+                    [self setImage:[[[SPPlatformNativeImage alloc] initWithData:imageData] autorelease]];
                 }
             }
         }
@@ -144,13 +144,13 @@ static NSMutableDictionary *imageCache;
 @synthesize loaded;
 @synthesize session;
 
--(NSImage *)image {
+-(SPPlatformNativeImage *)image {
 	if (image == nil && !hasRequestedImage)
 		[self beginLoading];
 	return image;
 }
 
--(void)setImage:(NSImage *)anImage {
+-(void)setImage:(SPPlatformNativeImage *)anImage {
 	if (image != anImage) {
 		[anImage retain];
 		[image release];

@@ -32,8 +32,8 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /** This class represents a list of tracks, be it a user's starred list, inbox, or a traditional "playlist". */
 
-#import <Cocoa/Cocoa.h>
-#import <libspotify/api.h>
+#import <Foundation/Foundation.h>
+#import "CocoaLibSpotifyPlatformImports.h"
 
 @class SPUser;
 @class SPImage;

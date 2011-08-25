@@ -38,7 +38,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import "SPPlaylistFolder.h"
 #import "SPPlaylistContainer.h"
 #import "SPSession.h"
-#import <libspotify/api.h>
+#import "CocoaLibSpotifyPlatformImports.h"
 #import "SPPlaylistContainerInternal.h"
 #import "SPPlaylistFolderInternal.h"
 

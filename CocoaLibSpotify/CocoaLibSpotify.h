@@ -49,4 +49,4 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import <CocoaLibSpotify/SPAlbumBrowse.h>
 #import <CocoaLibSpotify/SPToplist.h>
 
-#import <libspotify/api.h>
+#import "CocoaLibSpotifyPlatformImports.h"

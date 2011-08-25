@@ -46,7 +46,7 @@ Playback
  */
 
 #import <Foundation/Foundation.h>
-#import <libspotify/api.h>
+#import "CocoaLibSpotifyPlatformImports.h"
 
 @class SPPlaylist;
 @class SPPlaylistFolder;

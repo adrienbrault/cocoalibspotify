@@ -32,14 +32,14 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /** Represents an image from the Spotify service. */
 
-#import <Cocoa/Cocoa.h>
-#import <libspotify/api.h>
+#import <Foundation/Foundation.h>
+#import "CocoaLibSpotifyPlatformImports.h"
 
 @class SPSession;
 
 @interface SPImage : NSObject {
     @private
-    NSImage *image;
+    SPPlatformNativeImage *image;
     sp_image *spImage;
     const byte *imageId;
     BOOL loaded;
@@ -99,7 +99,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ///----------------------------
 
 /** Returns an NSImage representation of the image, or `nil` if the image has yet to be loaded. */
-@property (readonly, retain) NSImage *image;
+@property (readonly, retain) SPPlatformNativeImage *image;
 
 /** Returns the ID of the image. */
 -(const byte *)imageId;
