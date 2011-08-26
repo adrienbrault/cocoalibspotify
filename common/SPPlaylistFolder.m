@@ -156,7 +156,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		return [self.parentContainer.session playlistFolderForFolderId:sp_playlistcontainer_playlist_folder_id(self.parentContainer.container, flattenedIndex)
 														   inContainer:self.parentContainer];
 	} else {
-		[NSException raise:@"Invalid index!" format:nil];
+		[NSException raise:@"Invalid index!" format:@""];
 		return nil;
 	}
 }

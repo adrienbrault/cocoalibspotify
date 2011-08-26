@@ -272,10 +272,10 @@ static int music_delivery(sp_session *session, const sp_audioformat *format, con
 	
 	if ([[sess playbackDelegate] respondsToSelector:@selector(session:shouldDeliverAudioFrames:ofCount:format:)]) {
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-        int framesConsumed = (int)[[sess playbackDelegate] session:sess
-										  shouldDeliverAudioFrames:frames
-														   ofCount:num_frames
-															format:format]; 
+        int framesConsumed = (int)[(id <SPSessionPlaybackDelegate>)[sess playbackDelegate] session:sess
+																		  shouldDeliverAudioFrames:frames
+																						   ofCount:num_frames
+																							format:format]; 
         [pool drain];
 		return framesConsumed;
     }
@@ -335,8 +335,8 @@ static void streaming_error(sp_session *session, sp_error error) {
 	
 	if ([[sess playbackDelegate] respondsToSelector:selector]) {
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-        [[sess playbackDelegate] session:sess
-			  didEncounterStreamingError:[NSError spotifyErrorWithCode:error]];
+        [(id <SPSessionPlaybackDelegate>)[sess playbackDelegate] session:sess
+											  didEncounterStreamingError:[NSError spotifyErrorWithCode:error]];
         [pool drain];
     }
 }
