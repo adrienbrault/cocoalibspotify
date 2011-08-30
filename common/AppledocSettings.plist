@@ -10,7 +10,6 @@
 		<string>Libraries</string>
 		<string>Frameworks</string>
 		<string>Testing</string>
-		<string>libspotify-0.0.8-Darwin</string>
 	</array>
 	<key>--logformat</key>
 	<integer>1</integer>

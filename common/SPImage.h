@@ -98,7 +98,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /// @name Properties
 ///----------------------------
 
-/** Returns an NSImage representation of the image, or `nil` if the image has yet to be loaded. */
+/** Returns an NSImage or UIImage representation of the image, or `nil` if the image has yet to be loaded. */
 @property (readonly, retain) SPPlatformNativeImage *image;
 
 /** Returns the ID of the image. */
