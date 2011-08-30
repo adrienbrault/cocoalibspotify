@@ -3,6 +3,8 @@ CocoaLibSpotify
 
 CocoaLibSpotify is an Objective-C wrapper around our libspotify library. It provides easy access to libspotify's features in a friendly, KVC/O compliant Objective-C wrapper.
 
+*IMPORTANT:* When checking out CocoaLibSpotify, please run a +git submodule update --init+ before trying to build the sample projects.
+
 Building -  Mac OS X
 ====================
 
@@ -19,6 +21,8 @@ At the moment, the easiest way to build CocoaLibSpotify on iOS is to include all
 
 #import "CocoaLibSpotify.h"
 
+Of course, you need to include libspotify in your project too. Simply download the archives from http://developer.spotify.com/ and include the library and api.h file in your project.
+
 Documentation
 =============
 
@@ -26,5 +30,5 @@ The headers of CocoaLibSpotify are well documented, and we've provided an Xcode 
 
 Contact
 =======
-1
+
 If you have any problems or find any bugs, see our GitHub page for known issues and discussion. Otherwise, we may be available in irc://irc.freenode.net/spotify. 

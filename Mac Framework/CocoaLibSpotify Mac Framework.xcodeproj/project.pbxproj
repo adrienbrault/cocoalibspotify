@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		501861121406A4A600F68815 /* libspotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501861111406A4A600F68815 /* libspotify.framework */; };
-		501861131406A4B700F68815 /* libspotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 501861111406A4A600F68815 /* libspotify.framework */; };
 		503D631013258041007772CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5028EC8B13092B7C00BF0B22 /* Cocoa.framework */; };
 		503D631B13258062007772CA /* SPErrorExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5028ECBE130947B800BF0B22 /* SPErrorExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		503D631D1325806E007772CA /* SPUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AB044C1312D00400357CD2 /* SPUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,14 +28,16 @@
 		50437908137057D9001DD605 /* SPPlaylistFolderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 50437906137057D7001DD605 /* SPPlaylistFolderInternal.h */; };
 		506359451369833500B90B67 /* SPToplist.h in Headers */ = {isa = PBXBuildFile; fileRef = 506359431369833500B90B67 /* SPToplist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		506359461369833500B90B67 /* SPToplist.m in Sources */ = {isa = PBXBuildFile; fileRef = 506359441369833500B90B67 /* SPToplist.m */; };
+		5065AAA4140CE329006F8C17 /* libspotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5065AAA3140CE329006F8C17 /* libspotify.framework */; };
+		5065AAA5140CE34D006F8C17 /* libspotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5065AAA3140CE329006F8C17 /* libspotify.framework */; };
 		50749E091406E3FD00063404 /* SPErrorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50749E081406E3FD00063404 /* SPErrorExtensions.m */; };
-		50749E0C1406E40500063404 /* SPURLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50749E0A1406E40500063404 /* SPURLExtensions.h */; };
+		50749E0C1406E40500063404 /* SPURLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 50749E0A1406E40500063404 /* SPURLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50749E0D1406E40500063404 /* SPURLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50749E0B1406E40500063404 /* SPURLExtensions.m */; };
 		50749E111406E44500063404 /* CocoaLibSpotify-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 50749E0F1406E44500063404 /* CocoaLibSpotify-Prefix.pch */; };
 		50749E141406E4AD00063404 /* SPTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 50749E121406E4AD00063404 /* SPTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50749E151406E4AD00063404 /* SPTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 50749E131406E4AD00063404 /* SPTrack.m */; };
-		5082F17C1406E29D0001F5C8 /* CocoaLibSpotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082F17A1406E29D0001F5C8 /* CocoaLibSpotify.h */; };
-		5082F17D1406E29D0001F5C8 /* CocoaLibSpotifyPlatformImports.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082F17B1406E29D0001F5C8 /* CocoaLibSpotifyPlatformImports.h */; };
+		5082F17C1406E29D0001F5C8 /* CocoaLibSpotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082F17A1406E29D0001F5C8 /* CocoaLibSpotify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5082F17D1406E29D0001F5C8 /* CocoaLibSpotifyPlatformImports.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082F17B1406E29D0001F5C8 /* CocoaLibSpotifyPlatformImports.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5099D84C136436D3005C7CDC /* SPPostTracksToInboxOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5099D84A136436D3005C7CDC /* SPPostTracksToInboxOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5099D84D136436D3005C7CDC /* SPPostTracksToInboxOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099D84B136436D3005C7CDC /* SPPostTracksToInboxOperation.m */; };
 		5099D87913644E71005C7CDC /* SPArtistBrowse.h in Headers */ = {isa = PBXBuildFile; fileRef = 5099D87713644E71005C7CDC /* SPArtistBrowse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,14 +56,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				501861131406A4B700F68815 /* libspotify.framework in CopyFiles */,
+				5065AAA5140CE34D006F8C17 /* libspotify.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		501861111406A4A600F68815 /* libspotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libspotify.framework; path = "libspotify-9.1.24-Darwin-universal/libspotify.framework"; sourceTree = "<group>"; };
 		5028EC8B13092B7C00BF0B22 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5028EC8E13092B7C00BF0B22 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5028EC8F13092B7C00BF0B22 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -77,11 +76,12 @@
 		503D56AC13107D4500894014 /* SPPlaylistContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPlaylistContainer.m; path = ../common/SPPlaylistContainer.m; sourceTree = "<group>"; };
 		503D56AF131086DB00894014 /* SPPlaylistFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaylistFolder.h; path = ../common/SPPlaylistFolder.h; sourceTree = "<group>"; };
 		503D56B0131086DB00894014 /* SPPlaylistFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPlaylistFolder.m; path = ../common/SPPlaylistFolder.m; sourceTree = "<group>"; };
-		503D630F13258041007772CA /* CocoaLibSpotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "CocoaLibSpotify.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		503D630F13258041007772CA /* CocoaLibSpotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLibSpotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504379011370564C001DD605 /* SPPlaylistContainerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaylistContainerInternal.h; path = ../common/SPPlaylistContainerInternal.h; sourceTree = "<group>"; };
 		50437906137057D7001DD605 /* SPPlaylistFolderInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaylistFolderInternal.h; path = ../common/SPPlaylistFolderInternal.h; sourceTree = "<group>"; };
 		506359431369833500B90B67 /* SPToplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPToplist.h; path = ../common/SPToplist.h; sourceTree = "<group>"; };
 		506359441369833500B90B67 /* SPToplist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPToplist.m; path = ../common/SPToplist.m; sourceTree = "<group>"; };
+		5065AAA3140CE329006F8C17 /* libspotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libspotify.framework; path = "libspotify-9.1.29-Darwin-universal/libspotify.framework"; sourceTree = "<group>"; };
 		50749E081406E3FD00063404 /* SPErrorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPErrorExtensions.m; path = ../common/SPErrorExtensions.m; sourceTree = "<group>"; };
 		50749E0A1406E40500063404 /* SPURLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPURLExtensions.h; path = ../common/SPURLExtensions.h; sourceTree = "<group>"; };
 		50749E0B1406E40500063404 /* SPURLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPURLExtensions.m; path = ../common/SPURLExtensions.m; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503D631013258041007772CA /* Cocoa.framework in Frameworks */,
-				501861121406A4A600F68815 /* libspotify.framework in Frameworks */,
+				5065AAA4140CE329006F8C17 /* libspotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +143,7 @@
 		5028EC8A13092B7B00BF0B22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				501861111406A4A600F68815 /* libspotify.framework */,
+				5065AAA3140CE329006F8C17 /* libspotify.framework */,
 				5028EC8B13092B7C00BF0B22 /* Cocoa.framework */,
 				5028EC8D13092B7C00BF0B22 /* Other Frameworks */,
 			);
@@ -306,6 +306,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 5028EC7C13092B7B00BF0B22;
 			productRefGroup = 5028EC8813092B7B00BF0B22 /* Products */;
@@ -340,7 +341,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/python;
-			shellScript = "import urllib\nimport zipfile\nimport os\nimport sys\nimport commands\n\nlibspotifyFileName = \"libspotify-9.1.24-Darwin-universal\"\nlibspotifyRemoteLocation = \"http://developer.spotify.com/download/libspotify/\"\nprojectDir = os.environ.get('PROJECT_DIR')\nlibspotifyDirectoryDir = os.path.join(projectDir, \"libspotify-9.1.24-Darwin-universal\")\nlibspotifyZipDir = os.path.join(projectDir, libspotifyFileName)\n\nif (os.path.exists(libspotifyDirectoryDir)):\n    print \"LibSpotify is present, no download needed.\"\n    sys.exit(0)\n\nprint \"LibSpotify not present, downloading...\"\n\ntry:\n    urllib.urlretrieve(libspotifyRemoteLocation + libspotifyFileName, libspotifyZipDir)\nexcept OSError:\n    print \"Could not download \" + libspotifyRemoteLocation + libspotifyFileName + \".\"\n    sys.exit(1)\n\nunzipCommand = 'unzip -q  \"' + libspotifyZipDir + '\" -d \"' + projectDir + '\"'\nunzipResult = commands.getstatusoutput(unzipCommand)\n\nif (unzipResult[0] != 0):\n    print \"Could not unzip \" + libspotifyFileName + \".\"\n    sys.exit(1)\n\ntry:\n    os.remove(libspotifyZipDir)\nexcept OSError:\n    print \"Could not remove downloaded zip file.\"\n\nprint \"Complete.\"";
+			shellScript = "import urllib\nimport zipfile\nimport os\nimport sys\nimport commands\n\nlibspotifyFileName = \"libspotify-9.1.29-Darwin-universal.tar.gz\"\nlibspotifyRemoteLocation = \"http://developer.spotify.com/download/libspotify/\"\nprojectDir = os.environ.get('PROJECT_DIR')\nlibspotifyDirectoryDir = os.path.join(projectDir, \"libspotify-9.1.29-Darwin-universal\")\nlibspotifyZipDir = os.path.join(projectDir, libspotifyFileName)\n\nif (os.path.exists(libspotifyDirectoryDir)):\n    print \"LibSpotify is present, no download needed.\"\n    sys.exit(0)\n\nprint \"LibSpotify not present, downloading...\"\n\ntry:\n    urllib.urlretrieve(libspotifyRemoteLocation + libspotifyFileName, libspotifyZipDir)\nexcept OSError:\n    print \"Could not download \" + libspotifyRemoteLocation + libspotifyFileName + \".\"\n    sys.exit(1)\n\nunzipCommand = 'tar -zxf \"' + libspotifyZipDir + '\"'\nunzipResult = commands.getstatusoutput(unzipCommand)\n\nif (unzipResult[0] != 0):\n    print \"Could not untar \" + libspotifyFileName + \".\"\n    sys.exit(1)\n\ntry:\n    os.remove(libspotifyZipDir)\nexcept OSError:\n    print \"Could not remove downloaded file.\"\n\nprint \"Complete.\"";
 		};
 		50E65EC31325915100E66AFA /* Run Script (Set up symbolic links) */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -431,7 +432,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/libspotify-9.1.24-Darwin-universal\"",
+					"\"$(SRCROOT)/libspotify-9.1.29-Darwin-universal\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -460,7 +461,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/libspotify-9.1.24-Darwin-universal\"",
+					"\"$(SRCROOT)/libspotify-9.1.29-Darwin-universal\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
