@@ -13,6 +13,6 @@ xcuserdata
 *.xcworkspace
 *.mode1v3
 *.pbxuser
-libspotify-0.0.*
+libspotify-*
 appkey.c
 
