@@ -79,6 +79,11 @@ static NSTimeInterval const kGameCountdownThreshold = 30.0;
 @synthesize roundTimer;
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notification {
+	
+	[SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
+											   userAgent:@"com.spotify.GuessTheIntro"
+												   error:nil];
+	 
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
 															 [NSNumber numberWithBool:YES], @"CreatePlaylist",
 															 [NSNumber numberWithInteger:1], @"HighMultiplier",
@@ -126,11 +131,9 @@ static NSTimeInterval const kGameCountdownThreshold = 30.0;
 	if ([[userNameField stringValue] length] > 0 && 
 		[[passwordField stringValue] length] > 0) {
 		
-		[[SPSession sharedSession] attemptLoginWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
-														userAgent:@"com.spotify.GuessTheIntro"
-														 userName:[userNameField stringValue]
-														 password:[passwordField stringValue]
-															error:nil];
+		[[SPSession sharedSession] attemptLoginWithUserName:[userNameField stringValue]
+												   password:[passwordField stringValue]
+										rememberCredentials:NO];
 	} else {
 		NSBeep();
 	}

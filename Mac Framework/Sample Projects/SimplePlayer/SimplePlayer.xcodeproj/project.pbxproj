@@ -13,6 +13,8 @@
 		5006F164137161D800AF4418 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5006F162137161D800AF4418 /* Credits.rtf */; };
 		5006F167137161D800AF4418 /* SimplePlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */; };
 		5006F16A137161D800AF4418 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5006F168137161D800AF4418 /* MainMenu.xib */; };
+		504E0907140CCE3A008A20D9 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */; };
+		504E0908140CCE41008A20D9 /* CocoaLibSpotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */; };
 		506DA5611371802A009A8D1F /* SPCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 506DA5601371802A009A8D1F /* SPCircularBuffer.m */; };
 		506DA59213718A36009A8D1F /* NCCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 506DA58D13718A36009A8D1F /* NCCommon.m */; };
 		506DA59613718B47009A8D1F /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506DA59513718B47009A8D1F /* AudioUnit.framework */; };
@@ -21,21 +23,19 @@
 		50A444B7138E72C00034D709 /* CoCAAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A444B1138E72C00034D709 /* CoCAAudioDevice.m */; };
 		50A444B8138E72C00034D709 /* CoCAAudioHardwareSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A444B3138E72C00034D709 /* CoCAAudioHardwareSystem.m */; };
 		50A444B9138E72C00034D709 /* CoCAAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A444B5138E72C00034D709 /* CoCAAudioUnit.m */; };
-		50A444D1138E744D0034D709 /* CocoaLibSpotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50A444D0138E744D0034D709 /* CocoaLibSpotify.framework */; };
-		50A444D2138E74D20034D709 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A444D0138E744D0034D709 /* CocoaLibSpotify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		50A444A8138E72430034D709 /* PBXContainerItemProxy */ = {
+		504E0903140CCE23008A20D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 50A444A1138E72430034D709 /* CocoaLibSpotify.xcodeproj */;
+			containerPortal = 504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 503D630F13258041007772CA;
 			remoteInfo = CocoaLibSpotify;
 		};
-		50A444AA138E726E0034D709 /* PBXContainerItemProxy */ = {
+		504E0905140CCE34008A20D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 50A444A1138E72430034D709 /* CocoaLibSpotify.xcodeproj */;
+			containerPortal = 504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 503D630E13258041007772CA;
 			remoteInfo = CocoaLibSpotify;
@@ -49,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				50A444D1138E744D0034D709 /* CocoaLibSpotify.framework in CopyFiles */,
+				504E0908140CCE41008A20D9 /* CocoaLibSpotify.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +69,7 @@
 		5006F165137161D800AF4418 /* SimplePlayerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerAppDelegate.h; sourceTree = "<group>"; };
 		5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerAppDelegate.m; sourceTree = "<group>"; };
 		5006F169137161D800AF4418 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify Mac Framework.xcodeproj"; path = "../../CocoaLibSpotify Mac Framework.xcodeproj"; sourceTree = "<group>"; };
 		506DA54C13717A0F009A8D1F /* appkey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = appkey.c; sourceTree = "<group>"; };
 		506DA55F1371802A009A8D1F /* SPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCircularBuffer.h; sourceTree = "<group>"; };
 		506DA5601371802A009A8D1F /* SPCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCircularBuffer.m; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		506DA59913718B72009A8D1F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		5099E8E613745FB3009D5D3E /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaybackManager.h; sourceTree = "<group>"; };
 		5099E8E713745FB3009D5D3E /* SPPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPlaybackManager.m; sourceTree = "<group>"; };
-		50A444A1138E72430034D709 /* CocoaLibSpotify.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaLibSpotify.xcodeproj; path = ../../CocoaLibSpotify.xcodeproj; sourceTree = "<group>"; };
 		50A444AF138E72C00034D709 /* CoCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCA.h; sourceTree = "<group>"; };
 		50A444B0138E72C00034D709 /* CoCAAudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCAAudioDevice.h; sourceTree = "<group>"; };
 		50A444B1138E72C00034D709 /* CoCAAudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoCAAudioDevice.m; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 		50A444B4138E72C00034D709 /* CoCAAudioUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCAAudioUnit.h; sourceTree = "<group>"; };
 		50A444B5138E72C00034D709 /* CoCAAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoCAAudioUnit.m; sourceTree = "<group>"; };
 		50A444B6138E72C00034D709 /* PrivateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateUtil.h; sourceTree = "<group>"; };
-		50A444D0138E744D0034D709 /* CocoaLibSpotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLibSpotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +94,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504E0907140CCE3A008A20D9 /* CocoaLibSpotify.framework in Frameworks */,
 				506DA59A13718B72009A8D1F /* CoreAudio.framework in Frameworks */,
 				506DA59613718B47009A8D1F /* AudioUnit.framework in Frameworks */,
 				5006F154137161D800AF4418 /* Cocoa.framework in Frameworks */,
-				50A444D2138E74D20034D709 /* CocoaLibSpotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +107,7 @@
 		5006F144137161D800AF4418 = {
 			isa = PBXGroup;
 			children = (
-				50A444A1138E72430034D709 /* CocoaLibSpotify.xcodeproj */,
+				504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */,
 				5006F159137161D800AF4418 /* SimplePlayer */,
 				5006F15A137161D800AF4418 /* Supporting Files */,
 				5006F152137161D800AF4418 /* Frameworks */,
@@ -127,7 +126,6 @@
 		5006F152137161D800AF4418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50A444D0138E744D0034D709 /* CocoaLibSpotify.framework */,
 				506DA59913718B72009A8D1F /* CoreAudio.framework */,
 				506DA59513718B47009A8D1F /* AudioUnit.framework */,
 				5006F153137161D800AF4418 /* Cocoa.framework */,
@@ -171,6 +169,14 @@
 			path = SimplePlayer;
 			sourceTree = "<group>";
 		};
+		504E08FD140CCE23008A20D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		506DA55E1371800C009A8D1F /* Playback Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,14 +197,6 @@
 				506DA58D13718A36009A8D1F /* NCCommon.m */,
 			);
 			path = CoCA;
-			sourceTree = "<group>";
-		};
-		50A444A2138E72430034D709 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				50A444A9138E72430034D709 /* CocoaLibSpotify.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		50A444AE138E72C00034D709 /* Source */ = {
@@ -231,7 +229,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				50A444AB138E726E0034D709 /* PBXTargetDependency */,
+				504E0906140CCE34008A20D9 /* PBXTargetDependency */,
 			);
 			name = SimplePlayer;
 			productName = SimplePlayer;
@@ -258,8 +256,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 50A444A2138E72430034D709 /* Products */;
-					ProjectRef = 50A444A1138E72430034D709 /* CocoaLibSpotify.xcodeproj */;
+					ProductGroup = 504E08FD140CCE23008A20D9 /* Products */;
+					ProjectRef = 504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -270,11 +268,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		50A444A9138E72430034D709 /* CocoaLibSpotify.framework */ = {
+		504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CocoaLibSpotify.framework;
-			remoteRef = 50A444A8138E72430034D709 /* PBXContainerItemProxy */;
+			remoteRef = 504E0903140CCE23008A20D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -311,10 +309,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		50A444AB138E726E0034D709 /* PBXTargetDependency */ = {
+		504E0906140CCE34008A20D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaLibSpotify;
-			targetProxy = 50A444AA138E726E0034D709 /* PBXContainerItemProxy */;
+			targetProxy = 504E0905140CCE34008A20D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -350,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = "\"$SRCROOT\"/**";
+				FRAMEWORK_SEARCH_PATHS = "\"$SRCROOT\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
@@ -372,7 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = "\"$SRCROOT\"/**";
+				FRAMEWORK_SEARCH_PATHS = "\"$SRCROOT\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -393,8 +391,7 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"../../**",
+					"../../libspotify-9.1.26-Darwin-universal",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -416,8 +413,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"../../**",
+					"../../libspotify-9.1.26-Darwin-universal",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -45,6 +45,10 @@
 @synthesize playbackManager;
 
 -(void)applicationWillFinishLaunching:(NSNotification *)notification {
+	
+	[SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size] 
+											   userAgent:@"com.spotify.SimplePlayer"
+												   error:nil];
 	[self.window center];
 	[self.window orderFront:nil];
 }
@@ -98,11 +102,9 @@
 	if ([[userNameField stringValue] length] > 0 && 
 		[[passwordField stringValue] length] > 0) {
 		
-		[[SPSession sharedSession] attemptLoginWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
-														userAgent:@"com.spotify.SimplePlayer"
-														 userName:[userNameField stringValue]
-														 password:[passwordField stringValue]
-															error:nil];
+		[[SPSession sharedSession] attemptLoginWithUserName:[userNameField stringValue]
+												   password:[passwordField stringValue]
+										rememberCredentials:NO];
 	} else {
 		NSBeep();
 	}
