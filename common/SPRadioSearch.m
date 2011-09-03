@@ -131,11 +131,11 @@ void radio_search_complete(sp_search *result, void *userdata) {
                   toYear:(NSUInteger)toYear
                inSession:(SPSession *)session
 {
-    return [self initWithRadioGenres:genre
-                            fromYear:fromYear
-                              toYear:toYear
-                            pageSize:kSPRadioSearchDefaultSearchPageSize
-                           inSession:session];
+    return [self initWithRadioGenre:genre
+                           fromYear:fromYear
+                             toYear:toYear
+                           pageSize:kSPRadioSearchDefaultSearchPageSize
+                          inSession:session];
 }
 
 - (id)initWithRadioGenre:(sp_radio_genre)genre
