@@ -35,6 +35,38 @@
 #import "SPRadioGenre.h"
 
 
+#pragma mark - Radio genres name
+
+typedef struct {
+    NSString * const name;
+    sp_radio_genre genre;
+} spc_radio_genre_name;
+
+spc_radio_genre_name radioGenresName[] = {
+    { @"AltPopRock",     SP_RADIO_GENRE_ALT_POP_ROCK },
+    { @"Blues",          SP_RADIO_GENRE_BLUES        },
+    { @"Country",        SP_RADIO_GENRE_COUNTRY      },
+    { @"Disco",          SP_RADIO_GENRE_DISCO        },
+    { @"Funk",           SP_RADIO_GENRE_FUNK         },
+    { @"Hardrock",       SP_RADIO_GENRE_HARD_ROCK    },
+    { @"HeavyMetal",     SP_RADIO_GENRE_HEAVY_METAL  },
+    { @"Rap",            SP_RADIO_GENRE_RAP          },
+    { @"House",          SP_RADIO_GENRE_HOUSE        },
+    { @"Jazz",           SP_RADIO_GENRE_JAZZ         },
+    { @"NewWave",        SP_RADIO_GENRE_NEW_WAVE     },
+    { @"RnB",            SP_RADIO_GENRE_RNB          },
+    { @"Pop",            SP_RADIO_GENRE_POP          },
+    { @"Punk",           SP_RADIO_GENRE_PUNK         },
+    { @"Reggae",         SP_RADIO_GENRE_REGGAE       },
+    { @"PopRock",        SP_RADIO_GENRE_POP_ROCK     },
+    { @"Soul",           SP_RADIO_GENRE_SOUL         },
+    { @"Techno",         SP_RADIO_GENRE_TECHNO       },
+};
+const size_t radioGenresNameSize = sizeof(radioGenresName) / sizeof(spc_radio_genre_name);
+
+
+#pragma mark -
+
 @interface SPRadioGenre()
 
 - (id)initWithGenre:(sp_radio_genre)genre name:(NSString *)name;
@@ -110,33 +142,3 @@ static NSArray *radioGenres = nil;
 }
 
 @end
-
-
-#pragma mark - Radio genres name
-
-typedef struct {
-    NSString * const name;
-    spc_radio_genre genre;
-} spc_radio_genre_name;
-
-struct spc_radio_genre_name radioGenresName[] = {
-    { @"AltPopRock",     SP_RADIO_GENRE_ALT_POP_ROCK },
-    { @"Blues",          SP_RADIO_GENRE_BLUES        },
-    { @"Country",        SP_RADIO_GENRE_COUNTRY      },
-    { @"Disco",          SP_RADIO_GENRE_DISCO        },
-    { @"Funk",           SP_RADIO_GENRE_FUNK         },
-    { @"Hardrock",       SP_RADIO_GENRE_HARD_ROCK    },
-    { @"HeavyMetal",     SP_RADIO_GENRE_HEAVY_METAL  },
-    { @"Rap",            SP_RADIO_GENRE_RAP          },
-    { @"House",          SP_RADIO_GENRE_HOUSE        },
-    { @"Jazz",           SP_RADIO_GENRE_JAZZ         },
-    { @"NewWave",        SP_RADIO_GENRE_NEW_WAVE     },
-    { @"RnB",            SP_RADIO_GENRE_RNB          },
-    { @"Pop",            SP_RADIO_GENRE_POP          },
-    { @"Punk",           SP_RADIO_GENRE_PUNK         },
-    { @"Reggae",         SP_RADIO_GENRE_REGGAE       },
-    { @"PopRock",        SP_RADIO_GENRE_POP_ROCK     },
-    { @"Soul",           SP_RADIO_GENRE_SOUL         },
-    { @"Techno",         SP_RADIO_GENRE_TECHNO       },
-};
-const size_t radioGenresNameSize = sizeof(radioGenres) / sizeof(spc_radio_genre_name);
