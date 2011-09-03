@@ -45,16 +45,16 @@ static NSInteger const kSPRadioSearchDoNotSearchPageSize = 0;
 
 @interface SPRadioSearch : NSObject
 
-- (id)initWithRadioGenre:(sp_radio_genre)genre
-                fromYear:(NSUInteger)fromYear
-                  toYear:(NSUInteger)toYear
-               inSession:(SPSession *)session;
+- (id)initWithRadioGenres:(sp_radio_genre)genre
+                 fromYear:(NSUInteger)fromYear
+                   toYear:(NSUInteger)toYear
+                inSession:(SPSession *)session;
 
-- (id)initWithRadioGenre:(sp_radio_genre)genre
-                fromYear:(NSUInteger)fromYear
-                  toYear:(NSUInteger)toYear
-                pageSize:(NSInteger)pageSize
-               inSession:(SPSession *)session;
+- (id)initWithRadioGenres:(sp_radio_genre)genre
+                 fromYear:(NSUInteger)fromYear
+                   toYear:(NSUInteger)toYear
+                 pageSize:(NSInteger)pageSize
+                inSession:(SPSession *)session;
 
 - (BOOL)addPage;
 
