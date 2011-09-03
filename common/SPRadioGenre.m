@@ -35,7 +35,7 @@
 #import "SPRadioGenre.h"
 
 
-@interface SPRadioGenre
+@interface SPRadioGenre()
 
 - (id)initWithGenre:(sp_radio_genre)genre name:(NSString *)name;
 
