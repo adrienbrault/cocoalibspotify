@@ -111,6 +111,14 @@ static NSArray *radioGenres = nil;
 }
 
 
+#pragma mark - NSObject
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@: %@", [super description], self.name];
+}
+
+
 #pragma mark - Class
 
 + (NSArray *)radioGenres
