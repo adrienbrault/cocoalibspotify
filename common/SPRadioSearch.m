@@ -37,6 +37,7 @@
 #import "SPURLExtensions.h"
 #import "SPErrorExtensions.h"
 #import "SPTrack.h"
+#import "SPRadioGenre.h"
 
 
 @interface SPRadioSearch ()
@@ -125,10 +126,10 @@ void radio_search_complete(sp_search *result, void *userdata) {
 	return self;
 }
 
-- (id)initWithRadioGenres:(sp_radio_genre)genre
-                 fromYear:(NSUInteger)fromYear
-                   toYear:(NSUInteger)toYear
-                inSession:(SPSession *)session
+- (id)initWithRadioGenre:(sp_radio_genre)genre
+                fromYear:(NSUInteger)fromYear
+                  toYear:(NSUInteger)toYear
+               inSession:(SPSession *)session
 {
     return [self initWithRadioGenres:genre
                             fromYear:fromYear
@@ -137,11 +138,11 @@ void radio_search_complete(sp_search *result, void *userdata) {
                            inSession:session];
 }
 
-- (id)initWithRadioGenres:(sp_radio_genre)genre
-                 fromYear:(NSUInteger)fromYear
-                   toYear:(NSUInteger)toYear
-                 pageSize:(NSInteger)pageSize
-                inSession:(SPSession *)session
+- (id)initWithRadioGenre:(sp_radio_genre)genre
+                fromYear:(NSUInteger)fromYear
+                  toYear:(NSUInteger)toYear
+                pageSize:(NSInteger)pageSize
+               inSession:(SPSession *)session
 {
     if ((self = [self initWithSession:session])) {
         _genre = genre;
@@ -153,6 +154,36 @@ void radio_search_complete(sp_search *result, void *userdata) {
     }
     
     return self;
+}
+
+- (id)initWithRadioGenres:(id <NSFastEnumeration>)genres
+                 fromYear:(NSUInteger)fromYear
+                   toYear:(NSUInteger)toYear
+                inSession:(SPSession *)session
+{
+    return [self initWithRadioGenres:genres
+                            fromYear:fromYear
+                              toYear:toYear
+                            pageSize:kSPRadioSearchDefaultSearchPageSize
+                           inSession:session];
+}
+
+- (id)initWithRadioGenres:(id <NSFastEnumeration>)genres
+                 fromYear:(NSUInteger)fromYear
+                   toYear:(NSUInteger)toYear
+                 pageSize:(NSInteger)pageSize
+                inSession:(SPSession *)session
+{
+    sp_radio_genre genre = 0;
+    for (SPRadioGenre *radioGenre in genres) {
+        genre |= radioGenre.genre;
+    }
+    
+    return [self initWithRadioGenre:genre
+                           fromYear:fromYear
+                             toYear:toYear
+                           pageSize:pageSize
+                          inSession:session];
 }
 
 - (void)dealloc
