@@ -51,6 +51,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import "SPArtistBrowse.h"
 #import "SPAlbumBrowse.h"
 #import "SPToplist.h"
+#import "SPRadioSearch.h
 
 #else
 
