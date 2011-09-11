@@ -587,7 +587,7 @@ static SPSession *sharedSession;
 		
         } else if ([keyPath isEqualToString:@"connectionState"]) {
                     
-            if ([self connectionState] == SP_CONNECTION_STATE_LOGGED_IN) {
+            if ([self connectionState] == SP_CONNECTION_STATE_LOGGED_IN || [self connectionState] == SP_CONNECTION_STATE_OFFLINE) {
                 
                 if (inboxPlaylist == nil) {
                     sp_playlist *pl = sp_session_inbox_create(session);
