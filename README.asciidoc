@@ -12,7 +12,13 @@ The Xcode project was built in Xcode 4.0, but should also work fine in Xcode 3.2
 
 CocoaLibSpotify requires libspotify.framework, which isn't included in the repository. The Xcode project includes a build step to download and unpack it from developer.spotify.com automatically. If this fails for some reason, download it manually from developer.spotify.com and unpack it into the project folder.
 
-The built CocoaLibSpotify.framework contains libspotify.framework as a child framework. Sometimes, Xcode gives build errors complaining it can't find <libspotify/api.h>. If you get this, manually add the directory CocoaLibSpotify.framework is in to your project's "Framework Search Paths" build setting.
+The built CocoaLibSpotify.framework contains libspotify.framework as a child framework. Sometimes, Xcode gives build errors complaining it can't find <libspotify/api.h>. If you get this, manually add the directory libspotify.framework is in to your project's "Framework Search Paths" build setting. For example, if you're building the CocoaLibSpotify.framework project with your application then copying it into your bundle, you'd have this:
+
+`$CONFIGURATION_BUILD_DIR/CocoaLibSpotify.framework/Versions/Frameworks`
+
+Otherwise, you'd point to the downloaded libspotify.framework manually, something like this:
+
+`../../libspotify-9.1.32-Darwin-universal`
 
 Building - iOS
 ==============
