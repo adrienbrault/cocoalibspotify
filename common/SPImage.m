@@ -53,7 +53,7 @@ static NSString * const kSPImageKVOContext = @"kSPImageKVOContext";
 
 static NSMutableDictionary *imageCache;
 
-+(SPImage *)imageWithImageId:(const byte[])imageId inSession:(SPSession *)aSession {
++(SPImage *)imageWithImageId:(const byte[SPImageIdLength])imageId inSession:(SPSession *)aSession {
 
     if (imageCache == nil) {
         imageCache = [[NSMutableDictionary alloc] init];
@@ -63,7 +63,7 @@ static NSMutableDictionary *imageCache;
 		return nil;
 	}
 	
-	NSData *imageIdAsData = [NSData dataWithBytes:imageId length:sizeof(imageId)];
+	NSData *imageIdAsData = [NSData dataWithBytes:imageId length:SPImageIdLength];
 	SPImage *cachedImage = [imageCache objectForKey:imageIdAsData];
 	
 	if (cachedImage != nil)
@@ -96,7 +96,7 @@ static NSMutableDictionary *imageCache;
 
 #pragma mark -
 
--(id)initWithImageStruct:(sp_image *)anImage imageId:(const byte[20])anId inSession:aSession {
+-(id)initWithImageStruct:(sp_image *)anImage imageId:(const byte[SPImageIdLength])anId inSession:aSession {
 	
     if ((self = [super init])) {
 		

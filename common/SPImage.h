@@ -37,6 +37,8 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 @class SPSession;
 
+static NSUInteger const SPImageIdLength = 20;
+
 @interface SPImage : NSObject {
     @private
     SPPlatformNativeImage *image;
@@ -60,7 +62,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  @param aSession The SPSession the image should exist in.
  @return Returns the created SPImage object. 
  */
-+(SPImage *)imageWithImageId:(const byte[])imageId inSession:(SPSession *)aSession;
++(SPImage *)imageWithImageId:(const byte[SPImageIdLength])imageId inSession:(SPSession *)aSession;
 
 /** Creates an SPImage from the given URL. 
  
