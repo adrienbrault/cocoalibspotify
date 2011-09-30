@@ -110,13 +110,6 @@ static void logged_in(sp_session *session, sp_error error) {
     [sess willChangeValueForKey:@"connectionState"];
     [sess didChangeValueForKey:@"connectionState"];
     
-	// XXX DEBUG Let us print the nice message...
-	sp_user *me = sp_session_user(session);
-	const char *my_name = (sp_user_is_loaded(me) ?
-                           sp_user_display_name(me) :
-                           sp_user_canonical_name(me));
-	NSLog(@"Logged in as user %s", my_name);
-    
 	SEL selector = @selector(sessionDidLoginSuccessfully:);
     
     if ([[sess delegate] respondsToSelector:selector]) {
