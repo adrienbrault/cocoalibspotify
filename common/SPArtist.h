@@ -41,6 +41,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 @interface SPArtist : NSObject {
     @private
     sp_artist *artist;
+    NSURL *spotifyURL;
 }
 
 ///----------------------------

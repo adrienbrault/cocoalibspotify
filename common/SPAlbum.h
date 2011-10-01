@@ -48,6 +48,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	SPSession *session;
     SPImage *cover;
     SPArtist *artist;
+    NSURL *spotifyURL;
 }
 
 ///----------------------------
