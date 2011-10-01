@@ -100,4 +100,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /** Returns the artist's name. */
 @property (readonly) NSString *name;
 
+/** Returns the Spotify URI of the track, for example: `spotify:artist:12EtLdLfJ41vUOoVzPZIUy` */
+@property (readonly, copy) NSURL *spotifyURL;
+
 @end

@@ -33,6 +33,12 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #import "SPArtist.h"
 #import "SPURLExtensions.h"
 
+@interface SPArtist ()
+
+@property (copy, readwrite) NSURL *spotifyURL;
+
+@end
+
 @implementation SPArtist
 
 static NSMutableDictionary *artistCache;
@@ -75,6 +81,12 @@ static NSMutableDictionary *artistCache;
     if ((self = [super init])) {
         artist = anArtist;
         sp_artist_add_ref(artist);
+        sp_link *link = sp_link_create_from_artist(anArtist);
+        if (link != NULL) {
+            self.spotifyURL = [NSURL urlWithSpotifyLink:link];
+            sp_link_release(link);
+        }
+
         
         if (!sp_artist_is_loaded(artist)) {
             [self performSelector:@selector(checkLoaded)
@@ -104,6 +116,7 @@ static NSMutableDictionary *artistCache;
 }
 
 @synthesize artist;
+@synthesize spotifyURL;
 
 -(NSString *)name {
     const char *name = sp_artist_name(artist);
@@ -116,6 +129,7 @@ static NSMutableDictionary *artistCache;
 }
 
 -(void)dealloc {
+    self.spotifyURL = nil;
     sp_artist_release(artist);
     [super dealloc];
 }
