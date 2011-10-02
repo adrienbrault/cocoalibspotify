@@ -31,9 +31,10 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "CoCA.h"
 #import "SPCircularBuffer.h"
 #import <CocoaLibSpotify/CocoaLibSpotify.h>
+#import <CoreAudio/CoreAudio.h>
+#import <AudioUnit/AudioUnit.h>
 
 @class SPPlaybackManager;
 
@@ -44,17 +45,19 @@
 
 @end
 
-@interface SPPlaybackManager : NSObject <CoCAAudioUnitRenderDelegate, SPSessionPlaybackDelegate> {
+@interface SPPlaybackManager : NSObject <SPSessionPlaybackDelegate> {
 @private
 	
 	SPCircularBuffer *audioBuffer;
-	CoCAAudioUnit *audioUnit;
+	AudioUnit outputAudioUnit;
     NSTimeInterval currentTrackPosition;
 	SPSession *playbackSession;
 	double volume;
 	SPTrack *currentTrack;
 	NSTimeInterval trackPosition;
 	id <SPPlaybackManagerDelegate> delegate;
+    NSMethodSignature *incrementTrackPositionMethodSignature;
+	NSInvocation *incrementTrackPositionInvocation;
 }
 
 /** Initialize a new SPPlaybackManager object. 
