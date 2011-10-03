@@ -35,7 +35,7 @@
 		50AF4A8C1439CF8600E4A5EF /* SPPlaylistFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A6C1439CF8600E4A5EF /* SPPlaylistFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AF4A8D1439CF8600E4A5EF /* SPPlaylistFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A6D1439CF8600E4A5EF /* SPPlaylistFolder.m */; };
 		50AF4A8E1439CF8600E4A5EF /* SPPlaylistFolderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A6E1439CF8600E4A5EF /* SPPlaylistFolderInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50AF4A8F1439CF8600E4A5EF /* SPPostTracksToInboxOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A6F1439CF8600E4A5EF /* SPPostTracksToInboxOperation.h */; };
+		50AF4A8F1439CF8600E4A5EF /* SPPostTracksToInboxOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A6F1439CF8600E4A5EF /* SPPostTracksToInboxOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AF4A901439CF8600E4A5EF /* SPPostTracksToInboxOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A701439CF8600E4A5EF /* SPPostTracksToInboxOperation.m */; };
 		50AF4A911439CF8600E4A5EF /* SPSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A711439CF8600E4A5EF /* SPSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AF4A921439CF8600E4A5EF /* SPSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A721439CF8600E4A5EF /* SPSearch.m */; };
