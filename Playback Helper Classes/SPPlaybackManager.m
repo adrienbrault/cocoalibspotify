@@ -71,7 +71,7 @@ static NSUInteger const kMaximumBytesInBuffer = 44100 * 2 * 2 * 0.5; // 0.5 Seco
 		self.audioBuffer = [[[SPCircularBuffer alloc] initWithMaximumLength:kMaximumBytesInBuffer] autorelease];
 		
 		[self addObserver:self
-			   forKeyPath:@"playbackSession.isPlaying"
+			   forKeyPath:@"playbackSession.playing"
 				  options:0
 				  context:kSPPlaybackManagerKVOContext];
         
@@ -88,7 +88,7 @@ static NSUInteger const kMaximumBytesInBuffer = 44100 * 2 * 2 * 0.5; // 0.5 Seco
 
 -(void)dealloc {
 	
-	[self removeObserver:self forKeyPath:@"playbackSession.isPlaying"];
+	[self removeObserver:self forKeyPath:@"playbackSession.playing"];
 	
 	self.playbackSession.playbackDelegate = nil;
 	self.playbackSession = nil;
@@ -135,7 +135,7 @@ static NSUInteger const kMaximumBytesInBuffer = 44100 * 2 * 2 * 0.5; // 0.5 Seco
 }
 
 +(NSSet *)keyPathsForValuesAffectingIsPlaying {
-	return [NSSet setWithObject:@"playbackSession.isPlaying"];
+	return [NSSet setWithObject:@"playbackSession.playing"];
 }
 
 -(BOOL)isPlaying {
@@ -148,7 +148,7 @@ static NSUInteger const kMaximumBytesInBuffer = 44100 * 2 * 2 * 0.5; // 0.5 Seco
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
-	if ([keyPath isEqualToString:@"playbackSession.isPlaying"] && context == kSPPlaybackManagerKVOContext) {
+	if ([keyPath isEqualToString:@"playbackSession.playing"] && context == kSPPlaybackManagerKVOContext) {
         if (self.playbackSession.isPlaying) {
 			[self startAudioUnit];
 		} else {

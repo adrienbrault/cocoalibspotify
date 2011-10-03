@@ -56,10 +56,10 @@
 	[SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size] 
 											   userAgent:@"com.spotify.SimplePlayer-iOS"
 												   error:nil];
-	
+
 	self.playbackManager = [[[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]] autorelease];
-	
-	[self addObserver:self forKeyPath:@"currentTrack.title" options:0 context:nil];
+
+	[self addObserver:self forKeyPath:@"currentTrack.name" options:0 context:nil];
 	[self addObserver:self forKeyPath:@"currentTrack.artists" options:0 context:nil];
 	[self addObserver:self forKeyPath:@"currentTrack.duration" options:0 context:nil];
 	[self addObserver:self forKeyPath:@"currentTrack.album.cover.image" options:0 context:nil];
@@ -78,7 +78,7 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"currentTrack.title"]) {
+    if ([keyPath isEqualToString:@"currentTrack.name"]) {
         self.trackTitle.text = self.currentTrack.name;
 	} else if ([keyPath isEqualToString:@"currentTrack.artists"]) {
 		self.trackArtist.text = [[self.currentTrack.artists valueForKey:@"name"] componentsJoinedByString:@","];
@@ -224,7 +224,7 @@
 
 - (void)dealloc {
 	
-	[self removeObserver:self forKeyPath:@"currentTrack.title"];
+	[self removeObserver:self forKeyPath:@"currentTrack.name"];
 	[self removeObserver:self forKeyPath:@"currentTrack.artists"];
 	[self removeObserver:self forKeyPath:@"currentTrack.album.cover.image"];
 	[self removeObserver:self forKeyPath:@"playbackManager.trackPosition"];
