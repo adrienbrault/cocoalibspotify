@@ -1,7 +1,7 @@
 CocoaLibSpotify Sample Projects
 ===============================
 
-Please note: These sample projects require Mac OS X 10.6 and higher and Xcode 4.0 to build.
+Please note: These sample projects require Mac OS X 10.6 and higher and Xcode 4.0 to build on Mac OS X, or Xcode 4.0 and the iOS 4.3 or higher SDK for iOS.
 
 Please also note: The sample projects need a valid application key to build, placed in "appkey.c" in the same directory as the rest of the code files. Premium users can obtain an application key at http://developer.spotify.com/.
 

@@ -3,14 +3,14 @@ CocoaLibSpotify
 
 CocoaLibSpotify is an Objective-C wrapper around our libspotify library. It provides easy access to libspotify's features in a friendly, KVC/O compliant Objective-C wrapper.
 
+CocoaLibSpotify requires libspotify.framework, which isn't included in the repository. The Mac Framework and iOS Library  Xcode projects include a build step to download and unpack it from developer.spotify.com automatically. If this fails for some reason, download it manually from developer.spotify.com and unpack it into the project folder.
+
 Building -  Mac OS X
 ====================
 
 The Xcode project was built in Xcode 4.0, but should also work fine in Xcode 3.2.x.
 
-CocoaLibSpotify requires libspotify.framework, which isn't included in the repository. The Xcode project includes a build step to download and unpack it from developer.spotify.com automatically. If this fails for some reason, download it manually from developer.spotify.com and unpack it into the project folder.
-
-The built CocoaLibSpotify.framework contains libspotify.framework as a child framework. Sometimes, Xcode gives build errors complaining it can't find <libspotify/api.h>. If you get this, manually add the directory libspotify.framework is in to your project's "Framework Search Paths" build setting. For example, if you're building the CocoaLibSpotify.framework project with your application then copying it into your bundle, you'd have this:
+The built CocoaLibSpotify.framework contains libspotify.framework as a child framework. Sometimes, Xcode gives build errors complaining it can't find <libspotify/api.h>. If you get this, manually add the directory libspotify.framework is in to your project's "Framework Search Paths" build setting. For example, if you're building the CocoaLibSpotify project alongside your application as an embedded Xcode project then copying it into your bundle, you'd have this:
 
 `$CONFIGURATION_BUILD_DIR/CocoaLibSpotify.framework/Versions/Frameworks`
 
@@ -21,11 +21,17 @@ Otherwise, you'd point to the downloaded libspotify.framework manually, somethin
 Building - iOS
 ==============
 
-At the moment, the easiest way to build CocoaLibSpotify on iOS is to include all of the files in the "common" directory directory in your project. When you need to use CocoaLibSpotify, include the following header file and you'll have everything you need imported:
+The built libCocoaLibSpotify contains libspotify internally as a static library, as well as all of the required header files in a directory called "include".
 
-#import "CocoaLibSpotify.h"
+If you're building the CocoaLibSpotify project alongside your application as an embedded Xcode project then linking it with your application in a build step, you can tell Xcode where the header files are by adding the following setting to the "Framework Search Paths" build setting of your project:
 
-Of course, you need to include libspotify in your project too. Simply download the archives from http://developer.spotify.com/ and include the library and api.h file in your project.
+`$CONFIGURATION_BUILD_DIR/include`
+
+Otherwise, you can simply add all of the header files to your project manually. 
+
+Once everything is set up, simply import the following header to get started with CocoaLibSpotify!
+
+`#import "CocoaLibSpotify.h"`
 
 Documentation
 =============
