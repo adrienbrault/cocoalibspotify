@@ -32,9 +32,15 @@
 
 #import <Foundation/Foundation.h>
 #import "SPCircularBuffer.h"
-#import <CocoaLibSpotify/CocoaLibSpotify.h>
-#import <CoreAudio/CoreAudio.h>
 #import <AudioUnit/AudioUnit.h>
+
+#if TARGET_OS_IPHONE
+#import <CoreAudio/CoreAudioTypes.h>
+#import "CocoaLibSpotify.h"
+#else
+#import <CoreAudio/CoreAudio.h>
+#import <CocoaLibSpotify/CocoaLibSpotify.h>
+#endif
 
 @class SPPlaybackManager;
 

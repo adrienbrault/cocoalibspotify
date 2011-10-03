@@ -227,8 +227,12 @@ static NSUInteger const kMaximumBytesInBuffer = 44100 * 2 * 2 * 0.5; // 0.5 Seco
     // Tear down the audio init properly.
     [self stopAudioUnit];
     AudioUnitUninitialize(outputAudioUnit);
+	
+#if TARGET_OS_IPHONE
+	AudioComponentInstanceDispose(outputAudioUnit);
+#else 
     CloseComponent(outputAudioUnit);
-    
+#endif
     outputAudioUnit = NULL;
 }
 
@@ -249,27 +253,45 @@ static inline void fillWithError(NSError **mayBeAnError, NSString *localizedDesc
     
     if (outputAudioUnit != NULL)
         [self teardownCoreAudio];
-    
-    // Find the system default audio output by creating a component description and
+	
+	// Set up some platform-specific things
+#if TARGET_OS_IPHONE
+	AudioComponentDescription desc;
+	desc.componentSubType = kAudioUnitSubType_RemoteIO;
+#else
+	ComponentDescription desc;
+	desc.componentSubType = kAudioUnitSubType_DefaultOutput;
+#endif
+	
+	// Find the system default audio output by creating a component description and
     // searching for attached output components that match. If no components are connected
     // (like, say, a G4 Cube with no audio devices) this will fail.
-    ComponentDescription desc;
     desc.componentType = kAudioUnitType_Output;
-    desc.componentSubType = kAudioUnitSubType_DefaultOutput;
     desc.componentManufacturer = kAudioUnitManufacturer_Apple;
     desc.componentFlags = 0;
     desc.componentFlagsMask = 0;
     
     // Find a component that meets the description's specifications
-    Component comp = FindNextComponent(NULL, &desc);
-    
+#if TARGET_OS_IPHONE
+	AudioComponent comp = AudioComponentFindNext(NULL, &desc);
+#else
+	Component comp = FindNextComponent(NULL, &desc);
+#endif
+	
     if (comp == NULL) {
         fillWithError(err, @"Could not find a component that matches our specifications", -1);
         return NO;
     }
-    
+	
     // Attempt to gain access to the audio component.
-    OSErr status = OpenAComponent(comp, &outputAudioUnit);
+    OSErr status = noErr;
+	
+#if TARGET_OS_IPHONE
+	status = AudioComponentInstanceNew(comp, &outputAudioUnit);
+#else
+	status = OpenAComponent(comp, &outputAudioUnit);
+#endif
+	
     if (status != noErr) {
         fillWithError(err, @"Couldn't find a device that matched our criteria", status);
         return NO;
@@ -283,7 +305,7 @@ static inline void fillWithError(NSError **mayBeAnError, NSString *localizedDesc
     outputFormat.mSampleRate = (float)audioFormat->sample_rate;
     outputFormat.mFormatID = kAudioFormatLinearPCM;
     outputFormat.mFormatFlags = kLinearPCMFormatFlagIsSignedInteger | kLinearPCMFormatFlagIsPacked | kAudioFormatFlagsNativeEndian;
-    outputFormat.mBytesPerPacket = audioFormat->channels * sizeof(sint16);
+    outputFormat.mBytesPerPacket = audioFormat->channels * sizeof(SInt16);
     outputFormat.mFramesPerPacket = 1;
     outputFormat.mBytesPerFrame = outputFormat.mBytesPerPacket;
     outputFormat.mChannelsPerFrame = audioFormat->channels;
@@ -339,7 +361,7 @@ static inline void fillWithError(NSError **mayBeAnError, NSString *localizedDesc
 	
     // This is called by CocoaLibSpotify when there's audio data to be played. Since Core Audio uses callbacks as well to 
     // fetch data, we store the data in an intermediate buffer.
-    
+	
 	if (frameCount == 0) {
 		// If this happens (frameCount of 0), the user has seeked the track somewhere (or similar). 
 		// Clear audio buffers and wait for more data.
@@ -361,7 +383,7 @@ static inline void fillWithError(NSError **mayBeAnError, NSString *localizedDesc
 													withObject:self
 												 waitUntilDone:YES];
 	
-	NSUInteger frameByteSize = sizeof(sint16) * audioFormat->channels;
+	NSUInteger frameByteSize = sizeof(SInt16) * audioFormat->channels;
 	NSUInteger dataLength = frameCount * frameByteSize;
 	
 	if ((self.audioBuffer.maximumLength - self.audioBuffer.length) < dataLength) {
@@ -400,7 +422,6 @@ static OSStatus SPPlaybackManagerAudioUnitRenderDelegateCallback(void *inRefCon,
 	if (availableData < bytesRequired) {
 		buffer->mDataByteSize = 0;
 		*ioActionFlags |= kAudioUnitRenderAction_OutputIsSilence;
-        printf("Buffer underrun!\n");
 		return noErr;
     }
     

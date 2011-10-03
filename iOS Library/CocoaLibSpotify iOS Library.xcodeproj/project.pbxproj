@@ -371,6 +371,7 @@
 		50AF49EA1439CBFE00E4A5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv6;
 				DSTROOT = /tmp/CocoaLibSpotify_iOS_Library.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaLibSpotify iOS Library-Prefix.pch";
@@ -383,12 +384,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = armv6;
 			};
 			name = Debug;
 		};
 		50AF49EB1439CBFE00E4A5EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv6;
 				DSTROOT = /tmp/CocoaLibSpotify_iOS_Library.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaLibSpotify iOS Library-Prefix.pch";
@@ -401,6 +404,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = armv6;
 			};
 			name = Release;
 		};

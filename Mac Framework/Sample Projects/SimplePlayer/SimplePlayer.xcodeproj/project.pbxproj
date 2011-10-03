@@ -66,7 +66,6 @@
 		5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerAppDelegate.m; sourceTree = "<group>"; };
 		5006F169137161D800AF4418 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify Mac Framework.xcodeproj"; path = "../../CocoaLibSpotify Mac Framework.xcodeproj"; sourceTree = "<group>"; };
-		506DA54C13717A0F009A8D1F /* appkey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = appkey.c; sourceTree = "<group>"; };
 		506DA59513718B47009A8D1F /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		506DA59913718B72009A8D1F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		50A26BD41439D6B000A0C876 /* SPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPCircularBuffer.h; path = "../../../../Playback Helper Classes/SPCircularBuffer.h"; sourceTree = "<group>"; };
@@ -133,7 +132,6 @@
 		5006F159137161D800AF4418 /* SimplePlayer */ = {
 			isa = PBXGroup;
 			children = (
-				506DA54C13717A0F009A8D1F /* appkey.c */,
 				5006F165137161D800AF4418 /* SimplePlayerAppDelegate.h */,
 				5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */,
 				5006F168137161D800AF4418 /* MainMenu.xib */,
