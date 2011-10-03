@@ -23,6 +23,17 @@ Building - iOS
 
 The built libCocoaLibSpotify contains libspotify internally as a static library, as well as all of the required header files in a directory called "include".
 
+When including libCocoaLibSpotify in your application, you must also link to the following frameworks:
+
+- SystemConfiguration.framework
+- CFNetwork.framework
+- libstdc++
+
+In addition, you must add the following two items to the "Other Linker Flags" build setting:
+
+- -all_load
+- -ObjC
+
 If you're building the CocoaLibSpotify project alongside your application as an embedded Xcode project then linking it with your application in a build step, you can tell Xcode where the header files are by adding the following setting to the "Framework Search Paths" build setting of your project:
 
 `$CONFIGURATION_BUILD_DIR/include`
