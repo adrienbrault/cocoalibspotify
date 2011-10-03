@@ -26,6 +26,7 @@
 		50AF49CB1439CB6D00E4A5EF /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF49C91439CB6D00E4A5EF /* MainWindow_iPad.xib */; };
 		50FAA136143A02AE00FF06D7 /* SPLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FAA138143A02AE00FF06D7 /* SPLoginViewController_iPhone.xib */; };
 		50FAA139143A02B300FF06D7 /* SPLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FAA13B143A02B300FF06D7 /* SPLoginViewController_iPad.xib */; };
+		50FAA141143A0B1400FF06D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FAA140143A0B1400FF06D7 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		50AF49CA1439CB6D00E4A5EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 		50FAA137143A02AE00FF06D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPLoginViewController_iPhone.xib; sourceTree = "<group>"; };
 		50FAA13A143A02B300FF06D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPLoginViewController_iPad.xib; sourceTree = "<group>"; };
+		50FAA140143A0B1400FF06D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FAA141143A0B1400FF06D7 /* AVFoundation.framework in Frameworks */,
 				5002BD811439E90400FEAB3C /* libstdc++.dylib in Frameworks */,
 				5002BD7F1439E8FC00FEAB3C /* CFNetwork.framework in Frameworks */,
 				5002BD7D1439E8E800FEAB3C /* SystemConfiguration.framework in Frameworks */,
@@ -146,6 +149,7 @@
 		50AF49AB1439CB6D00E4A5EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50FAA140143A0B1400FF06D7 /* AVFoundation.framework */,
 				5002BD801439E90400FEAB3C /* libstdc++.dylib */,
 				5002BD7E1439E8FC00FEAB3C /* CFNetwork.framework */,
 				5002BD7C1439E8E800FEAB3C /* SystemConfiguration.framework */,

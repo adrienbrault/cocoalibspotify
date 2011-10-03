@@ -35,6 +35,7 @@
 #import <AudioUnit/AudioUnit.h>
 
 #if TARGET_OS_IPHONE
+#import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
 #import "CocoaLibSpotify.h"
 #else

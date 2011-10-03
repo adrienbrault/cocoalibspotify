@@ -230,6 +230,7 @@ static NSUInteger const kMaximumBytesInBuffer = 44100 * 2 * 2 * 0.5; // 0.5 Seco
 	
 #if TARGET_OS_IPHONE
 	AudioComponentInstanceDispose(outputAudioUnit);
+	[[AVAudioSession sharedInstance] setActive:NO error:nil];
 #else 
     CloseComponent(outputAudioUnit);
 #endif
@@ -256,6 +257,17 @@ static inline void fillWithError(NSError **mayBeAnError, NSString *localizedDesc
 	
 	// Set up some platform-specific things
 #if TARGET_OS_IPHONE
+	
+	NSError *error = nil;
+	BOOL success = YES;
+	success &= [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+	success &= [[AVAudioSession sharedInstance] setActive:YES error:&error];
+	
+	if (!success && err != NULL) {
+		*err = error;
+		return NO;
+	}
+	
 	AudioComponentDescription desc;
 	desc.componentSubType = kAudioUnitSubType_RemoteIO;
 #else
