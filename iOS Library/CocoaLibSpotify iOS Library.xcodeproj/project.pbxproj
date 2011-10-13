@@ -47,6 +47,10 @@
 		50AF4A981439CF8600E4A5EF /* SPTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A781439CF8600E4A5EF /* SPTrack.m */; };
 		50AF4A991439CF8600E4A5EF /* SPUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A791439CF8600E4A5EF /* SPUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AF4A9A1439CF8600E4A5EF /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A7A1439CF8600E4A5EF /* SPUser.m */; };
+		95631DDE1447511B00AC38DB /* SPRadioGenre.h in Headers */ = {isa = PBXBuildFile; fileRef = 95631DDA1447511B00AC38DB /* SPRadioGenre.h */; };
+		95631DDF1447511B00AC38DB /* SPRadioGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = 95631DDB1447511B00AC38DB /* SPRadioGenre.m */; };
+		95631DE01447511B00AC38DB /* SPRadioSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 95631DDC1447511B00AC38DB /* SPRadioSearch.h */; };
+		95631DE11447511B00AC38DB /* SPRadioSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 95631DDD1447511B00AC38DB /* SPRadioSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +95,10 @@
 		50AF4A781439CF8600E4A5EF /* SPTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPTrack.m; path = ../common/SPTrack.m; sourceTree = "<group>"; };
 		50AF4A791439CF8600E4A5EF /* SPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPUser.h; path = ../common/SPUser.h; sourceTree = "<group>"; };
 		50AF4A7A1439CF8600E4A5EF /* SPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPUser.m; path = ../common/SPUser.m; sourceTree = "<group>"; };
+		95631DDA1447511B00AC38DB /* SPRadioGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPRadioGenre.h; path = ../common/SPRadioGenre.h; sourceTree = "<group>"; };
+		95631DDB1447511B00AC38DB /* SPRadioGenre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPRadioGenre.m; path = ../common/SPRadioGenre.m; sourceTree = "<group>"; };
+		95631DDC1447511B00AC38DB /* SPRadioSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPRadioSearch.h; path = ../common/SPRadioSearch.h; sourceTree = "<group>"; };
+		95631DDD1447511B00AC38DB /* SPRadioSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPRadioSearch.m; path = ../common/SPRadioSearch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +205,10 @@
 				50AF4A6E1439CF8600E4A5EF /* SPPlaylistFolderInternal.h */,
 				50AF4A6F1439CF8600E4A5EF /* SPPostTracksToInboxOperation.h */,
 				50AF4A701439CF8600E4A5EF /* SPPostTracksToInboxOperation.m */,
+				95631DDA1447511B00AC38DB /* SPRadioGenre.h */,
+				95631DDB1447511B00AC38DB /* SPRadioGenre.m */,
+				95631DDC1447511B00AC38DB /* SPRadioSearch.h */,
+				95631DDD1447511B00AC38DB /* SPRadioSearch.m */,
 				50AF4A711439CF8600E4A5EF /* SPSearch.h */,
 				50AF4A721439CF8600E4A5EF /* SPSearch.m */,
 				50AF4A731439CF8600E4A5EF /* SPSession.h */,
@@ -238,6 +250,8 @@
 				50AF4A991439CF8600E4A5EF /* SPUser.h in Headers */,
 				500EC8B21439CFFD00E8A60C /* api.h in Headers */,
 				500EC8B51439D02A00E8A60C /* CocoaLibSpotify iOS Library-Prefix.pch in Headers */,
+				95631DDE1447511B00AC38DB /* SPRadioGenre.h in Headers */,
+				95631DE01447511B00AC38DB /* SPRadioSearch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +281,9 @@
 /* Begin PBXProject section */
 		50AF49D31439CBFE00E4A5EF /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 50AF49D61439CBFE00E4A5EF /* Build configuration list for PBXProject "CocoaLibSpotify iOS Library" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -322,6 +339,8 @@
 				50AF4A961439CF8600E4A5EF /* SPToplist.m in Sources */,
 				50AF4A981439CF8600E4A5EF /* SPTrack.m in Sources */,
 				50AF4A9A1439CF8600E4A5EF /* SPUser.m in Sources */,
+				95631DDF1447511B00AC38DB /* SPRadioGenre.m in Sources */,
+				95631DE11447511B00AC38DB /* SPRadioSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +394,7 @@
 				DSTROOT = /tmp/CocoaLibSpotify_iOS_Library.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaLibSpotify iOS Library-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/libspotify-9.1.56-iOS/lib\"",
@@ -395,6 +415,7 @@
 				DSTROOT = /tmp/CocoaLibSpotify_iOS_Library.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaLibSpotify iOS Library-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/libspotify-9.1.56-iOS/lib\"",
