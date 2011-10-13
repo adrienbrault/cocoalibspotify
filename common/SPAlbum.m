@@ -42,6 +42,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 @property (readwrite, retain) SPSession *session;
 @property (readwrite, retain) SPImage *cover; 
 @property (readwrite, retain) SPArtist *artist;
+@property (readwrite, copy) NSURL *spotifyURL;
 
 -(void)loadAlbumData;
 
@@ -90,6 +91,11 @@ static NSMutableDictionary *albumCache;
         album = anAlbum;
         sp_album_add_ref(album);
         self.session = aSession;
+        sp_link *link = sp_link_create_from_album(anAlbum);
+        if (link != NULL) {
+            self.spotifyURL = [NSURL urlWithSpotifyLink:link];
+            sp_link_release(link);
+        }
         
         if (!sp_album_is_loaded(album)) {
             [self performSelector:@selector(checkLoaded)
@@ -148,6 +154,7 @@ static NSMutableDictionary *albumCache;
 @synthesize session;
 @synthesize cover;
 @synthesize artist;
+@synthesize spotifyURL;
 
 -(BOOL)isAvailable {
     return (BOOL)sp_album_is_available(album);
@@ -177,6 +184,7 @@ static NSMutableDictionary *albumCache;
 
 -(void)dealloc {
     
+    self.spotifyURL = nil;
     self.session = nil;
     [self setCover:nil];
     [self setArtist:nil];

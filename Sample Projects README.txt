@@ -1,11 +1,9 @@
 CocoaLibSpotify Sample Projects
 ===============================
 
-Please note: These sample projects require Mac OS X 10.6 and higher and Xcode 4.0 to build.
+Please note: These sample projects require Mac OS X 10.6 and higher and Xcode 4.0 to build on Mac OS X, or Xcode 4.0 and the iOS 4.3 or higher SDK for iOS.
 
 Please also note: The sample projects need a valid application key to build, placed in "appkey.c" in the same directory as the rest of the code files. Premium users can obtain an application key at http://developer.spotify.com/.
-
-Please ALSO note: If you checked this out from our GitHub repo, you must run git submodule update --init before the sample projects will build.
 
 SimplePlayer
 ============
@@ -14,7 +12,7 @@ SimplePlayer is a very simple project that demonstrates logging in to the Spotif
 
 Since CocoaLibSpotify doesn't handle audio playback itself, a two classes are provided to help out:
 
-SPPlaybackManager: A class that takes care of SPSessionPlaybackDelegate methods to extract audio data and push it through CoreAudio. It uses a third-party Objective-C CoreAudio wrapper to do this.
+SPPlaybackManager: A class that takes care of SPSessionPlaybackDelegate methods to extract audio data and push it through CoreAudio.
 
 SPCircularBuffer: A simple circular buffer built around libspotify's behavior. This is used by SPPlaybackManager, but you may find it useful if you'd like to implement playback yourself.
 

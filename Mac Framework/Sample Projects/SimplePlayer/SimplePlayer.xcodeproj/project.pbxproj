@@ -15,14 +15,10 @@
 		5006F16A137161D800AF4418 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5006F168137161D800AF4418 /* MainMenu.xib */; };
 		504E0907140CCE3A008A20D9 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */; };
 		504E0908140CCE41008A20D9 /* CocoaLibSpotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */; };
-		506DA5611371802A009A8D1F /* SPCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 506DA5601371802A009A8D1F /* SPCircularBuffer.m */; };
-		506DA59213718A36009A8D1F /* NCCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 506DA58D13718A36009A8D1F /* NCCommon.m */; };
 		506DA59613718B47009A8D1F /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506DA59513718B47009A8D1F /* AudioUnit.framework */; };
 		506DA59A13718B72009A8D1F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506DA59913718B72009A8D1F /* CoreAudio.framework */; };
-		5099E8E813745FB3009D5D3E /* SPPlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5099E8E713745FB3009D5D3E /* SPPlaybackManager.m */; };
-		50A444B7138E72C00034D709 /* CoCAAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A444B1138E72C00034D709 /* CoCAAudioDevice.m */; };
-		50A444B8138E72C00034D709 /* CoCAAudioHardwareSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A444B3138E72C00034D709 /* CoCAAudioHardwareSystem.m */; };
-		50A444B9138E72C00034D709 /* CoCAAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A444B5138E72C00034D709 /* CoCAAudioUnit.m */; };
+		50A26BD81439D6B000A0C876 /* SPCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A26BD51439D6B000A0C876 /* SPCircularBuffer.m */; };
+		50A26BD91439D6B000A0C876 /* SPPlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A26BD71439D6B000A0C876 /* SPPlaybackManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,23 +66,12 @@
 		5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerAppDelegate.m; sourceTree = "<group>"; };
 		5006F169137161D800AF4418 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify Mac Framework.xcodeproj"; path = "../../CocoaLibSpotify Mac Framework.xcodeproj"; sourceTree = "<group>"; };
-		506DA54C13717A0F009A8D1F /* appkey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = appkey.c; sourceTree = "<group>"; };
-		506DA55F1371802A009A8D1F /* SPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCircularBuffer.h; sourceTree = "<group>"; };
-		506DA5601371802A009A8D1F /* SPCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCircularBuffer.m; sourceTree = "<group>"; };
-		506DA58C13718A36009A8D1F /* NCCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCommon.h; sourceTree = "<group>"; };
-		506DA58D13718A36009A8D1F /* NCCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCommon.m; sourceTree = "<group>"; };
 		506DA59513718B47009A8D1F /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		506DA59913718B72009A8D1F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
-		5099E8E613745FB3009D5D3E /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaybackManager.h; sourceTree = "<group>"; };
-		5099E8E713745FB3009D5D3E /* SPPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPlaybackManager.m; sourceTree = "<group>"; };
-		50A444AF138E72C00034D709 /* CoCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCA.h; sourceTree = "<group>"; };
-		50A444B0138E72C00034D709 /* CoCAAudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCAAudioDevice.h; sourceTree = "<group>"; };
-		50A444B1138E72C00034D709 /* CoCAAudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoCAAudioDevice.m; sourceTree = "<group>"; };
-		50A444B2138E72C00034D709 /* CoCAAudioHardwareSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCAAudioHardwareSystem.h; sourceTree = "<group>"; };
-		50A444B3138E72C00034D709 /* CoCAAudioHardwareSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoCAAudioHardwareSystem.m; sourceTree = "<group>"; };
-		50A444B4138E72C00034D709 /* CoCAAudioUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoCAAudioUnit.h; sourceTree = "<group>"; };
-		50A444B5138E72C00034D709 /* CoCAAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoCAAudioUnit.m; sourceTree = "<group>"; };
-		50A444B6138E72C00034D709 /* PrivateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateUtil.h; sourceTree = "<group>"; };
+		50A26BD41439D6B000A0C876 /* SPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPCircularBuffer.h; path = "../../../../Playback Helper Classes/SPCircularBuffer.h"; sourceTree = "<group>"; };
+		50A26BD51439D6B000A0C876 /* SPCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPCircularBuffer.m; path = "../../../../Playback Helper Classes/SPCircularBuffer.m"; sourceTree = "<group>"; };
+		50A26BD61439D6B000A0C876 /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaybackManager.h; path = "../../../../Playback Helper Classes/SPPlaybackManager.h"; sourceTree = "<group>"; };
+		50A26BD71439D6B000A0C876 /* SPPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPlaybackManager.m; path = "../../../../Playback Helper Classes/SPPlaybackManager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +132,6 @@
 		5006F159137161D800AF4418 /* SimplePlayer */ = {
 			isa = PBXGroup;
 			children = (
-				506DA54C13717A0F009A8D1F /* appkey.c */,
 				5006F165137161D800AF4418 /* SimplePlayerAppDelegate.h */,
 				5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */,
 				5006F168137161D800AF4418 /* MainMenu.xib */,
@@ -180,38 +164,12 @@
 		506DA55E1371800C009A8D1F /* Playback Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				5099E8E613745FB3009D5D3E /* SPPlaybackManager.h */,
-				5099E8E713745FB3009D5D3E /* SPPlaybackManager.m */,
-				506DA55F1371802A009A8D1F /* SPCircularBuffer.h */,
-				506DA5601371802A009A8D1F /* SPCircularBuffer.m */,
-				506DA58413718A36009A8D1F /* CoCA */,
+				50A26BD41439D6B000A0C876 /* SPCircularBuffer.h */,
+				50A26BD51439D6B000A0C876 /* SPCircularBuffer.m */,
+				50A26BD61439D6B000A0C876 /* SPPlaybackManager.h */,
+				50A26BD71439D6B000A0C876 /* SPPlaybackManager.m */,
 			);
 			name = "Playback Helpers";
-			sourceTree = "<group>";
-		};
-		506DA58413718A36009A8D1F /* CoCA */ = {
-			isa = PBXGroup;
-			children = (
-				50A444AE138E72C00034D709 /* Source */,
-				506DA58C13718A36009A8D1F /* NCCommon.h */,
-				506DA58D13718A36009A8D1F /* NCCommon.m */,
-			);
-			path = CoCA;
-			sourceTree = "<group>";
-		};
-		50A444AE138E72C00034D709 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				50A444AF138E72C00034D709 /* CoCA.h */,
-				50A444B0138E72C00034D709 /* CoCAAudioDevice.h */,
-				50A444B1138E72C00034D709 /* CoCAAudioDevice.m */,
-				50A444B2138E72C00034D709 /* CoCAAudioHardwareSystem.h */,
-				50A444B3138E72C00034D709 /* CoCAAudioHardwareSystem.m */,
-				50A444B4138E72C00034D709 /* CoCAAudioUnit.h */,
-				50A444B5138E72C00034D709 /* CoCAAudioUnit.m */,
-				50A444B6138E72C00034D709 /* PrivateUtil.h */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +200,7 @@
 		5006F146137161D800AF4418 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = Spotify;
 			};
 			buildConfigurationList = 5006F149137161D800AF4418 /* Build configuration list for PBXProject "SimplePlayer" */;
@@ -297,12 +256,8 @@
 			files = (
 				5006F161137161D800AF4418 /* main.m in Sources */,
 				5006F167137161D800AF4418 /* SimplePlayerAppDelegate.m in Sources */,
-				506DA5611371802A009A8D1F /* SPCircularBuffer.m in Sources */,
-				506DA59213718A36009A8D1F /* NCCommon.m in Sources */,
-				5099E8E813745FB3009D5D3E /* SPPlaybackManager.m in Sources */,
-				50A444B7138E72C00034D709 /* CoCAAudioDevice.m in Sources */,
-				50A444B8138E72C00034D709 /* CoCAAudioHardwareSystem.m in Sources */,
-				50A444B9138E72C00034D709 /* CoCAAudioUnit.m in Sources */,
+				50A26BD81439D6B000A0C876 /* SPCircularBuffer.m in Sources */,
+				50A26BD91439D6B000A0C876 /* SPPlaybackManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
