@@ -47,9 +47,9 @@
 		50AF4A981439CF8600E4A5EF /* SPTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A781439CF8600E4A5EF /* SPTrack.m */; };
 		50AF4A991439CF8600E4A5EF /* SPUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AF4A791439CF8600E4A5EF /* SPUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AF4A9A1439CF8600E4A5EF /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF4A7A1439CF8600E4A5EF /* SPUser.m */; };
-		95631DDE1447511B00AC38DB /* SPRadioGenre.h in Headers */ = {isa = PBXBuildFile; fileRef = 95631DDA1447511B00AC38DB /* SPRadioGenre.h */; };
+		95631DDE1447511B00AC38DB /* SPRadioGenre.h in Headers */ = {isa = PBXBuildFile; fileRef = 95631DDA1447511B00AC38DB /* SPRadioGenre.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95631DDF1447511B00AC38DB /* SPRadioGenre.m in Sources */ = {isa = PBXBuildFile; fileRef = 95631DDB1447511B00AC38DB /* SPRadioGenre.m */; };
-		95631DE01447511B00AC38DB /* SPRadioSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 95631DDC1447511B00AC38DB /* SPRadioSearch.h */; };
+		95631DE01447511B00AC38DB /* SPRadioSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 95631DDC1447511B00AC38DB /* SPRadioSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95631DE11447511B00AC38DB /* SPRadioSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 95631DDD1447511B00AC38DB /* SPRadioSearch.m */; };
 /* End PBXBuildFile section */
 
@@ -242,6 +242,8 @@
 				50AF4A8B1439CF8600E4A5EF /* SPPlaylistContainerInternal.h in Headers */,
 				50AF4A8C1439CF8600E4A5EF /* SPPlaylistFolder.h in Headers */,
 				50AF4A8E1439CF8600E4A5EF /* SPPlaylistFolderInternal.h in Headers */,
+				95631DDE1447511B00AC38DB /* SPRadioGenre.h in Headers */,
+				95631DE01447511B00AC38DB /* SPRadioSearch.h in Headers */,
 				50AF4A8F1439CF8600E4A5EF /* SPPostTracksToInboxOperation.h in Headers */,
 				50AF4A911439CF8600E4A5EF /* SPSearch.h in Headers */,
 				50AF4A931439CF8600E4A5EF /* SPSession.h in Headers */,
@@ -250,8 +252,6 @@
 				50AF4A991439CF8600E4A5EF /* SPUser.h in Headers */,
 				500EC8B21439CFFD00E8A60C /* api.h in Headers */,
 				500EC8B51439D02A00E8A60C /* CocoaLibSpotify iOS Library-Prefix.pch in Headers */,
-				95631DDE1447511B00AC38DB /* SPRadioGenre.h in Headers */,
-				95631DE01447511B00AC38DB /* SPRadioSearch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
